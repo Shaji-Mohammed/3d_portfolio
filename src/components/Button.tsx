@@ -1,4 +1,10 @@
-const Button = ({ text, className, id }) => {
+interface Props {
+    text: string;
+    className: string;
+    id: string;
+}
+
+const Button = ({ text, className, id } : Props) => {
   return (
     <a className={`${className ?? ""} cta-wrapper`}>
       <div className="cta-button group">

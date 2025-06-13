@@ -48,6 +48,9 @@ const Hero = () => {
             />
           </div>
         </header>
+
+        {/* 3D Model */}
+        
       </div>
     </section>
   );
