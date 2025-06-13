@@ -1,4 +1,5 @@
 import Button from "../components/Button.js";
+import HeroExp from "../components/HeroModels/HeroExp.js";
 import { words } from "../constants/index.js";
 
 const Hero = () => {
@@ -50,7 +51,11 @@ const Hero = () => {
         </header>
 
         {/* 3D Model */}
-        
+        <figure>
+          <div className="hero-3d-layout">
+            <HeroExp />
+          </div>
+        </figure>
       </div>
     </section>
   );
