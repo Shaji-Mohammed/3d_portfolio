@@ -11,12 +11,9 @@ const HeroExp = () => {
 
   return (
     <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
-      
       <HeroLights />
 
-      <Particles 
-        count={75}
-      />
+      <Particles count={75} />
 
       <OrbitControls
         enablePan={false}
