@@ -1,3 +1,8 @@
+type navLinks = {
+  name: string,
+  link: string
+}
+
 const navLinks = [
   {
     name: "Work",
