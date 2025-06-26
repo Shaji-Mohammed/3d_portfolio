@@ -4,6 +4,7 @@ import { Room } from "./Room.jsx";
 import { OrbitControls } from "@react-three/drei";
 import HeroLights from "./HeroLights.js";
 import Particles from "./Particles.js";
+import { Suspense } from "react";
 
 const HeroExp = () => {
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
@@ -11,9 +12,7 @@ const HeroExp = () => {
 
   return (
     <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
-      <HeroLights />
-
-      <Particles count={75} />
+      <ambientLight intensity={0.2} color="#1a1a40" />
 
       <OrbitControls
         enablePan={false}
@@ -24,13 +23,17 @@ const HeroExp = () => {
         maxPolarAngle={Math.PI / 2}
       />
 
-      <group
-        scale={isMobile ? 0.7 : 1}
-        position={[0, -3.5, 0]}
-        rotation={[0, -Math.PI / 4, 0]}
-      >
-        <Room />
-      </group>
+      <Suspense>
+        <HeroLights />
+        <Particles count={75} />
+        <group
+          scale={isMobile ? 0.7 : 1}
+          position={[0, -3.5, 0]}
+          rotation={[0, -Math.PI / 4, 0]}
+        >
+          <Room />
+        </group>
+      </Suspense>
     </Canvas>
   );
 };
