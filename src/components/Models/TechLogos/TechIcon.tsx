@@ -1,6 +1,5 @@
 import { Environment, Float, OrbitControls, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import React from "react";
 
 const TechIcon = ({ model }) => {
   const scene = useGLTF(model.modelPath);
