@@ -6,7 +6,7 @@ import React from "react";
 const ContactExp = () => {
   return (
     <Canvas camera={{ position: [2, 2, 5], fov: 42.5 }} shadows>
-      <ambientLight castShadow intensity={0.5} color={"#fff4e6"} />
+      <ambientLight intensity={0.5} color={"#fff4e6"} />
       <directionalLight castShadow position={[5, 5, 3]} intensity={1} />
       <spotLight
         position={[-5, 5, 5]}
