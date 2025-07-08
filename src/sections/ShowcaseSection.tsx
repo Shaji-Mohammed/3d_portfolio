@@ -52,10 +52,10 @@ const ShowcaseSection = () => {
           {/* LEFT */}
           <div className="first-project-wrapper" ref={project1Ref}>
             <div className="image-wrapper">
-              <img src="/images/project1.png" alt="Ryde" />
+              <img src="/images/1.png" alt="Ryde" />
             </div>
             <div className="text-content">
-              <h2>On-Demand Rides made simple</h2>
+              <h2>Buying and Selling Off-Market made simple</h2>
               <p className="text-white-50 md:text-xl">
                 An App built with React Native, Expo, TailwindCSS
               </p>
@@ -65,10 +65,10 @@ const ShowcaseSection = () => {
           {/* RIGHT */}
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={project2Ref}>
-              <div className="image-wrapper bg-[#ffefdb]">
-                <img src="/images/project2.png" alt="Lyft" />
+              <div className="image-wrapper bg-[#f4e7a6]">
+                <img src="/images/2.png" alt="Lyft" />
               </div>
-              <h2>Management tool</h2>
+              <h2>Graduate TA Handbook</h2>
             </div>
 
             <div className="project" ref={project3Ref}>
