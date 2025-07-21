@@ -166,7 +166,7 @@ const expCards = [
     title: "Co-Founder",
     date: "January 2025 - Present",
     responsibilities: [
-      "Developed Python test scripts to thoroughly asses the functionality of MySQL database using GraphQL API..",
+      "Developed Python test scripts to thoroughly asses the functionality of MySQL database using GraphQL API.",
       " Developed a mobile App using React Native, Expo, Tailwind, and TypeScript, integrating real-time WebSockets for chat.",
       "Implemented a REST API with Django & Django REST Framework backed by a PostgreSQL database on Azure.",
       "Engaged with potential clients and partners to gather feedback, validate product ideas, and establish relationships.",
@@ -181,7 +181,7 @@ const expCards = [
     title: "Software Development Intern",
     date: "January 2024 - August 2024",
     responsibilities: [
-      "Developed Python test scripts to thoroughly asses the functionality of MySQL database using GraphQL API..",
+      "Developed Python test scripts to thoroughly asses the functionality of MySQL database using GraphQL API.",
       "Integrated test scripts into the CI/CD pipeline using Terraform for AWS CodeBuild and Github Actions.",
       "Created Python Scripts for clients to efficiently manage users in AWS Cognito userpool groups.",
       " Created a Flutter WebApp, migrated functionality from a Flutter Andriod App and integrating backend."
@@ -190,8 +190,8 @@ const expCards = [
   {
     review:
       "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
+    imgPath: "/images/dal.png",
+    logoPath: "/images/dal_logo.png",
     title: "Instructional Developer",
     date: "January 2023 - Present",
     responsibilities: [

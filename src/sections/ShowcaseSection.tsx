@@ -66,7 +66,7 @@ const ShowcaseSection = () => {
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={project2Ref}>
               <div className="image-wrapper bg-[#f4e7a6]">
-                <img src="/images/2.png" alt="Lyft" />
+                <img src="/images/2.png" alt="Graduate TA Handbook" />
               </div>
               <h2>Graduate TA Handbook</h2>
             </div>
