@@ -161,7 +161,7 @@ const expCards = [
   {
     review:
       "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
+    imgPath: "/images/EstateLynx.png",
     logoPath: "/images/EstateLynx_logo.png",
     title: "Co-Founder",
     date: "January 2025 - Present",
@@ -170,13 +170,13 @@ const expCards = [
       " Developed a mobile App using React Native, Expo, Tailwind, and TypeScript, integrating real-time WebSockets for chat.",
       "Implemented a REST API with Django & Django REST Framework backed by a PostgreSQL database on Azure.",
       "Engaged with potential clients and partners to gather feedback, validate product ideas, and establish relationships.",
-      "Led UI/UX design efforts to deliver a modern interface and intuitive user experience."
+      "Led UI/UX design efforts to deliver a modern interface and intuitive user experience.",
     ],
   },
   {
     review:
-      "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
+      "Shaji quickly grew into his role, showing strong enthusiasm, initiative, and a clear desire to learn. He asked thoughtful questions, took pride in his work, and consistently delivered more than expected. While he started off a bit nervous, his communication and technical output improved significantly over time. We were very satisfied with his performance and have invited him back for another term, which he has accepted.",
+    imgPath: "/images/Ashored.png",
     logoPath: "/images/Ashored_logo.png",
     title: "Software Development Intern",
     date: "January 2024 - August 2024",
@@ -184,12 +184,12 @@ const expCards = [
       "Developed Python test scripts to thoroughly asses the functionality of MySQL database using GraphQL API.",
       "Integrated test scripts into the CI/CD pipeline using Terraform for AWS CodeBuild and Github Actions.",
       "Created Python Scripts for clients to efficiently manage users in AWS Cognito userpool groups.",
-      " Created a Flutter WebApp, migrated functionality from a Flutter Andriod App and integrating backend."
+      " Created a Flutter WebApp, migrated functionality from a Flutter Andriod App and integrating backend.",
     ],
   },
   {
     review:
-      "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
+      "Shaji has been an excellent team member—enthusiastic, proactive, and highly dependable. He consistently delivered quality work, responded well to feedback, and worked effectively with others. As his confidence has grown, so has his impact. I’d gladly welcome him back for another term and hope he considers rejoining us during his studies.",
     imgPath: "/images/dal.png",
     logoPath: "/images/dal_logo.png",
     title: "Instructional Developer",
@@ -200,14 +200,14 @@ const expCards = [
       "Built a Python web-scraper to extract Dalhousie’s academic timetable and generate instructor schedules in Excel.",
       "Collaborated with Educational Developer and Instructors to create a TA training guide and improve student engagement.",
       "Created documentation, presentations, and videos to bridge communication gaps between students and professors.",
-      "Developed workflows using Power Automate, reducing redundancy and saving instructors’ time on routine tasks."
+      "Developed workflows using Power Automate, reducing redundancy and saving instructors’ time on routine tasks.",
     ],
   },
   {
     review:
-      "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
+      "Shaji was a valuable addition to the team—enthusiastic, dependable, and quick to learn. He delivered high-quality work that exceeded expectations and contributed directly to customer-facing features. I'd be happy to have him return for another term.",
+    imgPath: "/images/Protocase.png",
+    logoPath: "/images/image.png",
     title: "Software Developer Intern",
     date: "May 2022 - August 2022",
     responsibilities: [
@@ -216,7 +216,7 @@ const expCards = [
       "Created UML diagrams and documentation to support onboarding and project handover.",
       "Collaborated with Marketing and Sales Directors to enhance applications based on user feedback.",
       "Utilized MySQL to store client details with price estimates to generate leads for the sales team.",
-      "Presented project progress in sprint meetings, incorporating insights from senior colleagues."
+      "Presented project progress in sprint meetings, incorporating insights from senior colleagues.",
     ],
   },
 ];
@@ -285,12 +285,12 @@ const socialImgs = [
   {
     name: "Github",
     imgPath: "/images/github.png",
-    url: 'https://github.com/Shaji-Mohammed'
+    url: "https://github.com/Shaji-Mohammed",
   },
   {
     name: "linkedin",
     imgPath: "/images/linkedin.png",
-    url: 'https://www.linkedin.com/in/shaji-mohd/'
+    url: "https://www.linkedin.com/in/shaji-mohd/",
   },
 ];
 

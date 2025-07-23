@@ -369,10 +369,10 @@ section {
   background: linear-gradient(
     0deg,
     rgba(69, 222, 196, 0) 0%,
-    #62e0ff 25%,
-    #52aeff 37.51%,
-    #fd5c79 62.83%,
-    #6d45ce 92.91%
+    #62e0ff 15%,
+    #f6ff52 37.51%,
+    #52aeff 62.83%,
+    #133d8f 92.91%
   );
 }
 
