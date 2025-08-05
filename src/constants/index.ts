@@ -177,7 +177,7 @@ const expCards = [
   },
   {
     review:
-      "Shaji quickly grew into his role, showing strong enthusiasm, initiative, and a clear desire to learn. He asked thoughtful questions, took pride in his work, and consistently delivered more than expected. While he started off a bit nervous, his communication and technical output improved significantly over time. We were very satisfied with his performance and have invited him back for another term, which he has accepted.",
+      "Shaji quickly grew into his role, showing strong enthusiasm, initiative, and a clear desire to learn. He asked thoughtful questions, took pride in his work, and consistently delivered more than expected. While he started off a bit nervous, his communication and technical output improved significantly over time.",
     imgPath: "/images/Ashored.png",
     logoPath: "/images/Ashored_logo.png",
     title: "Software Development Intern",
@@ -186,12 +186,12 @@ const expCards = [
       "Developed Python test scripts to thoroughly asses the functionality of MySQL database using GraphQL API.",
       "Integrated test scripts into the CI/CD pipeline using Terraform for AWS CodeBuild and Github Actions.",
       "Created Python Scripts for clients to efficiently manage users in AWS Cognito userpool groups.",
-      " Created a Flutter WebApp, migrated functionality from a Flutter Andriod App and integrating backend.",
+      "Created a Flutter WebApp, migrated functionality from a Flutter Andriod App and integrating backend.",
     ],
   },
   {
     review:
-      "Shaji has been an excellent team member—enthusiastic, proactive, and highly dependable. He consistently delivered quality work, responded well to feedback, and worked effectively with others. As his confidence has grown, so has his impact. I’d gladly welcome him back for another term and hope he considers rejoining us during his studies.",
+      "Shaji has been an excellent team member—enthusiastic, proactive, and highly dependable. He consistently delivered quality work, responded well to feedback, and worked effectively with others. As his confidence has grown, so has his impact.",
     imgPath: "/images/dal.png",
     logoPath: "/images/dal_logo.png",
     title: "Instructional Developer",
@@ -200,8 +200,7 @@ const expCards = [
       "Developed a website for TA training using Next.js and Tailwind CSS to improve accessibility and engagement.",
       "Developed R scripts and Power BI queries to process data and generate charts and graphs for data analysis.",
       "Built a Python web-scraper to extract Dalhousie’s academic timetable and generate instructor schedules in Excel.",
-      "Collaborated with Educational Developer and Instructors to create a TA training guide and improve student engagement.",
-      "Created documentation, presentations, and videos to bridge communication gaps between students and professors.",
+      // "Collaborated with Educational Developer and Instructors to create a TA training guide.",
       "Developed workflows using Power Automate, reducing redundancy and saving instructors’ time on routine tasks.",
     ],
   },

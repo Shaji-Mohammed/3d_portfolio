@@ -64,7 +64,7 @@ const ExpSection = () => {
         />
 
         <div className="mt-20 relative">
-          <div className="relative z-50 xl:space-y-32 space-y-10">
+          <div className="relative z-50 xl:space-y-24 space-y-10">
             {expCards.map((card, index) => (
               <div className="exp-card-wrapper" key={card.title}>
                 <div className="xl:w-2/6">
@@ -87,9 +87,9 @@ const ExpSection = () => {
                       </div>
                       <div>
                         <h1 className="font-semibold text-3xl">{card.title}</h1>
-                        <p className="my-5 text-white-50">{card.date}</p>
+                        <p className="my-2 text-white-50">{card.date}</p>
                         <p className="text-[#839cb5] italic">Responsibilites</p>
-                        <ul className="list-disc ms-5 mt-5 flex flex-col gap-5 text-white-50">
+                        <ul className="list-disc ms-5 mt-2 flex flex-col gap-3.5 text-white-50">
                           {card.responsibilities.map((responsibility) => (
                             <li className="text-lg">{responsibility}</li>
                           ))}
