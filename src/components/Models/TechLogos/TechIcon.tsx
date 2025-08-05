@@ -1,21 +1,43 @@
 import { Environment, Float, OrbitControls, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
+import {Aws_logo} from './Aws_logo';
 
 const TechIcon = ({ model }) => {
+  if (model.name === "AWS") {
+    return (
+      <Canvas>
+        <ambientLight intensity={1} />
+        <directionalLight position={[5, 5, 5]} intensity={4} />
+        <Environment preset="night" />
+        <OrbitControls enableZoom={false} />
+
+        <Float speed={5.5} rotationIntensity={0.5} floatIntensity={0.9}>
+          <group scale={model.scale} position={model.position || [0, 0, 0]} rotation={model.rotation}>
+            <Aws_logo />
+          </group>
+        </Float>
+      </Canvas>
+    );
+  }
+
   const scene = useGLTF(model.modelPath);
 
   return (
     <Canvas>
-      <ambientLight intensity={0.3} />
+      <ambientLight intensity={0.5} />
 
-      <directionalLight position={[5, 5, 5]} intensity={1} />
+      <directionalLight position={[5, 5, 5]} intensity={1.5} />
 
-      <Environment preset="city" />
+      <Environment preset="night" />
 
       <OrbitControls enableZoom={false} />
 
       <Float speed={5.5} rotationIntensity={0.5} floatIntensity={0.9}>
-        <group scale={model.scale} rotation={model.rotation}>
+        <group
+          scale={model.scale}
+          position={model.position || [0, 0, 0]}
+          rotation={model.rotation}
+        >
           <primitive object={scene.scene} />
         </group>
       </Float>

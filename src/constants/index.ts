@@ -19,20 +19,20 @@ const navLinks = [
 ];
 
 const words = [
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Concepts", imgPath: "/images/concepts.svg" },
-  { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Code", imgPath: "/images/code.svg" },
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Concepts", imgPath: "/images/concepts.svg" },
-  { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Code", imgPath: "/images/code.svg" },
+  { text: "Developer", imgPath: "/images/ideas.svg" },
+  { text: "Software Engineer", imgPath: "/images/concepts.svg" },
+  { text: "Entrepreneur", imgPath: "/images/designs.svg" },
+  { text: "Trader", imgPath: "/images/code.svg" },
+  { text: "Developer", imgPath: "/images/ideas.svg" },
+  { text: "Software Engineer", imgPath: "/images/concepts.svg" },
+  { text: "Entrepreneur", imgPath: "/images/designs.svg" },
+  { text: "Trader", imgPath: "/images/code.svg" },
 ];
 
 const counterItems = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
-  { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 108, suffix: "+", label: "Completed Projects" },
+  { value: 2, suffix: "+", label: "Years of Experience" },
+  { value: 2, suffix: "+", label: "Satisfied Clients" },
+  { value: 10, suffix: "+", label: "Completed Projects" },
   { value: 90, suffix: "%", label: "Client Retention Rate" },
 ];
 
@@ -126,27 +126,29 @@ const techStackImgs = [
 
 const techStackIcons = [
   {
-    name: "React Developer",
+    name: "React/React Native",
     modelPath: "/models/react_logo-transformed.glb",
     scale: 1,
     rotation: [0, 0, 0],
   },
   {
-    name: "Python Developer",
+    name: "Python (Django)",
     modelPath: "/models/python-transformed.glb",
     scale: 0.8,
     rotation: [0, 0, 0],
   },
   {
-    name: "Backend Developer",
-    modelPath: "/models/node-transformed.glb",
-    scale: 5,
-    rotation: [0, -Math.PI / 2, 0],
+    name: "Java",
+    modelPath: "/models/java-transformed.glb",
+    position: [0, -0.35, 0],
+    scale: 1.25,
+    rotation: [0.1, -Math.PI / 6, 0],
   },
   {
-    name: "Interactive Developer",
-    modelPath: "/models/three.js-transformed.glb",
-    scale: 0.05,
+    name: "AWS",
+    modelPath: "/models/aws_logo-transformed.glb",
+    position: [0, -2.5, 0],
+    scale: 0.45,
     rotation: [0, 0, 0],
   },
   {

@@ -29,7 +29,7 @@ const ExpSection = () => {
       scrollTrigger: {
         trigger: ".timeline",
         start: "top center",
-        end: "70% center",
+        end: "85% center",
         onUpdate: (self) => {
           gsap.to(".timeline", {
             scaleY: 1 - self.progress,
@@ -54,7 +54,7 @@ const ExpSection = () => {
 
   return (
     <section
-      className="w-full md:mt-40 mt-20 section-padding xl:px-0"
+      className="w-full md:mt-24 py-8 mt-10 section-padding xl:px-0"
       id="experience"
     >
       <div className="w-full h-full md:px-20 px-5">
@@ -63,7 +63,7 @@ const ExpSection = () => {
           sub="My Career Overview"
         />
 
-        <div className="mt-32 relative">
+        <div className="mt-20 relative">
           <div className="relative z-50 xl:space-y-32 space-y-10">
             {expCards.map((card, index) => (
               <div className="exp-card-wrapper" key={card.title}>
