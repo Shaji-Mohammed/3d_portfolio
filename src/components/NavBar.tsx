@@ -1,23 +1,34 @@
 import { useEffect, useState } from "react";
 import { navLinks } from "../constants/index.ts";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 
 const NavBar = () => {
-    const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  gsap.registerPlugin(ScrambleTextPlugin);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const isScrolled = window.scrollY > 10;
-            setScrolled(true);
-        }
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 10;
+      setScrolled(true);
+    };
 
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useGSAP(() => {
+    gsap.to(".name", {
+      duration: 1.5,
+      scrambleText: "Shaji Mohammed",
+    });
+  });
 
   return (
-    <header className={`navbar ${scrolled ? 'scrolled' : 'not-scrolled'}`}>
+    <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
       <div className="inner">
-        <a href="#hero" className="logo">
+        <a href="#hero" className="logo name">
           Shaji Mohammed
         </a>
 

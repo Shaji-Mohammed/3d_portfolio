@@ -19,13 +19,13 @@ const navLinks = [
 ];
 
 const words = [
-  { text: "Developer", imgPath: "/images/ideas.svg" },
+  { text: "Web Developer", imgPath: "/images/ideas.svg" },
   { text: "Software Engineer", imgPath: "/images/concepts.svg" },
-  { text: "Entrepreneur", imgPath: "/images/designs.svg" },
+  { text: "Problem Solver", imgPath: "/images/designs.svg" },
   { text: "Trader", imgPath: "/images/code.svg" },
-  { text: "Developer", imgPath: "/images/ideas.svg" },
+  { text: "Web Developer", imgPath: "/images/ideas.svg" },
   { text: "Software Engineer", imgPath: "/images/concepts.svg" },
-  { text: "Entrepreneur", imgPath: "/images/designs.svg" },
+  { text: "Problem Solver", imgPath: "/images/designs.svg" },
   { text: "Trader", imgPath: "/images/code.svg" },
 ];
 
@@ -159,28 +159,82 @@ const techStackIcons = [
   },
 ];
 
+const project1_tools = [
+  {
+    name: "React Native",
+    iconPath:
+      "/images/React.png",
+  },
+  {
+    name: "Expo",
+    iconPath:
+      "/images/Expo.png",
+  },
+  {
+    name: "NativeWind",
+    iconPath:
+      "/images/Tailwind.png",
+  },
+  {
+    name: "Azure",
+    iconPath:
+      "/images/Azure.png",
+  },
+  {
+    name: "PostgreSQL",
+    iconPath:
+      "/images/PostgreSQL.png",
+  },
+  {
+    name: "Django",
+    iconPath:
+      "/images/Django.png",
+  },
+];
+
+const project2_tools = [
+  {
+    name: "React",
+    iconPath:
+      "/images/React.png",
+  },
+  {
+    name: "NextJS",
+    iconPath:
+      "/images/Expo.png",
+  },
+  {
+    name: "Tailwind",
+    iconPath:
+      "/images/Tailwind.png",
+  },
+  {
+    name: "GSAP",
+    iconPath:
+      "/images/Azure.png",
+  },
+];
+
 const expCards = [
   {
-    review:
-      "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
+    review: "TBD :)",
     imgPath: "/images/EstateLynx.png",
     logoPath: "/images/EstateLynx_logo.png",
-    title: "Co-Founder",
+    title: "Co-Founder @ EstateLynx",
     date: "January 2025 - Present",
     responsibilities: [
-      "Developed Python test scripts to thoroughly asses the functionality of MySQL database using GraphQL API.",
-      " Developed a mobile App using React Native, Expo, Tailwind, and TypeScript, integrating real-time WebSockets for chat.",
+      "Developed a mobile App using React Native, Expo, Tailwind, and TypeScript, integrating WebSockets for chat.",
       "Implemented a REST API with Django & Django REST Framework backed by a PostgreSQL database on Azure.",
-      "Engaged with potential clients and partners to gather feedback, validate product ideas, and establish relationships.",
-      "Led UI/UX design efforts to deliver a modern interface and intuitive user experience.",
+      "Engaged with clients and partners to gather feedback, validate product ideas, and establish relationships.",
+      "Collaborated with stakeholders to clarify MVP requirements, ensuring alignment with consumer insights.",
     ],
   },
   {
     review:
-      "Shaji quickly grew into his role, showing strong enthusiasm, initiative, and a clear desire to learn. He asked thoughtful questions, took pride in his work, and consistently delivered more than expected. While he started off a bit nervous, his communication and technical output improved significantly over time.",
+      "Shaji quickly grew into his role, showing strong enthusiasm, initiative, and a clear desire to learn. He asked thoughtful questions, and consistently delivered more than expected. While he started off a bit nervous, his communication and technical output improved significantly over time.",
     imgPath: "/images/Ashored.png",
     logoPath: "/images/Ashored_logo.png",
-    title: "Software Development Intern",
+    title: "Software Development Intern @ Ashored Innovations",
     date: "January 2024 - August 2024",
     responsibilities: [
       "Developed Python test scripts to thoroughly asses the functionality of MySQL database using GraphQL API.",
@@ -194,7 +248,7 @@ const expCards = [
       "Shaji has been an excellent team member—enthusiastic, proactive, and highly dependable. He consistently delivered quality work, responded well to feedback, and worked effectively with others. As his confidence has grown, so has his impact.",
     imgPath: "/images/dal.png",
     logoPath: "/images/dal_logo.png",
-    title: "Instructional Developer",
+    title: "Instructional Developer @ Dalhousie University",
     date: "January 2023 - Present",
     responsibilities: [
       "Developed a website for TA training using Next.js and Tailwind CSS to improve accessibility and engagement.",
@@ -209,7 +263,7 @@ const expCards = [
       "Shaji was a valuable addition to the team—enthusiastic, dependable, and quick to learn. He delivered high-quality work that exceeded expectations and contributed directly to customer-facing features. I'd be happy to have him return for another term.",
     imgPath: "/images/Protocase.png",
     logoPath: "/images/image.png",
-    title: "Software Developer Intern",
+    title: "Software Developer Intern @ Protocase Inc.",
     date: "May 2022 - August 2022",
     responsibilities: [
       "Developed a website with Java, JavaScript and Bootstrap for CAD uploads, 3D viewing, and pricing estimates.",
@@ -307,4 +361,6 @@ export {
   techStackIcons,
   techStackImgs,
   navLinks,
+  project1_tools,
+  project2_tools,
 };

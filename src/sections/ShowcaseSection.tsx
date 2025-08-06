@@ -2,6 +2,8 @@ import { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { project1_tools, project2_tools } from "../constants";
+import { BtnBorder } from "../components/btn_border";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,10 +56,16 @@ const ShowcaseSection = () => {
             <div className="image-wrapper">
               <img src="/images/1.png" alt="Ryde" />
             </div>
+            <div className="flex flex-row space-x-2 py-2">
+              {project1_tools.map((tool) => (
+                <BtnBorder name={tool.name} path={tool.iconPath} />
+              ))}
+            </div>
             <div className="text-content">
               <h2>Buying and Selling Off-Market made simple</h2>
               <p className="text-white-50 md:text-xl">
-                An App built with React Native, Expo, TailwindCSS
+                An App built for Real Estate Agents to buy and sell off-market
+                properties.
               </p>
             </div>
           </div>
@@ -67,6 +75,11 @@ const ShowcaseSection = () => {
             <div className="project" ref={project2Ref}>
               <div className="image-wrapper bg-[#f4e7a6]">
                 <img src="/images/2.png" alt="Graduate TA Handbook" />
+              </div>
+              <div className="flex flex-row space-x-2 ml-0.5 py-2">
+                {project2_tools.map((tool) => (
+                  <BtnBorder name={tool.name} path={tool.iconPath} />
+                ))}
               </div>
               <h2>Graduate TA Handbook</h2>
             </div>
