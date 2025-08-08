@@ -162,56 +162,42 @@ const techStackIcons = [
 const project1_tools = [
   {
     name: "React Native",
-    iconPath:
-      "/images/React.png",
+    iconPath: "/images/React.png",
   },
   {
     name: "Expo",
-    iconPath:
-      "/images/Expo.png",
+    iconPath: "/images/Expo.png",
   },
   {
     name: "NativeWind",
-    iconPath:
-      "/images/Tailwind.png",
+    iconPath: "/images/Tailwind.png",
   },
   {
     name: "Azure",
-    iconPath:
-      "/images/Azure.png",
+    iconPath: "/images/Azure.png",
   },
   {
     name: "PostgreSQL",
-    iconPath:
-      "/images/PostgreSQL.png",
+    iconPath: "/images/PostgreSQL.png",
   },
   {
     name: "Django",
-    iconPath:
-      "/images/Django.png",
+    iconPath: "/images/Django.png",
   },
 ];
 
 const project2_tools = [
   {
     name: "React",
-    iconPath:
-      "/images/React.png",
+    iconPath: "/images/React.png",
   },
   {
     name: "NextJS",
-    iconPath:
-      "/images/Expo.png",
+    iconPath: "/images/next.png",
   },
   {
     name: "Tailwind",
-    iconPath:
-      "/images/Tailwind.png",
-  },
-  {
-    name: "GSAP",
-    iconPath:
-      "/images/Azure.png",
+    iconPath: "/images/Tailwind.png",
   },
 ];
 
@@ -346,6 +332,11 @@ const socialImgs = [
     name: "linkedin",
     imgPath: "/images/linkedin.png",
     url: "https://www.linkedin.com/in/shaji-mohd/",
+  },
+  {
+    name: "Download Resume",
+    imgPath: "/images/linkedin.png",
+    url: "/images/Resume_Shaji.pdf"
   },
 ];
 

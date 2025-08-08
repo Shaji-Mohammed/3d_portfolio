@@ -298,14 +298,14 @@ section {
   }
 
   .footer {
-    @apply my-10 md:mt-20 mt-10 text-white-50 px-5 md:px-20 xl:px-20 flex items-center justify-center;
+    @apply my-10 md:mt-20 mt-10 text-white-50 px-5 md:px-10 xl:px-20 flex items-center justify-between;
 
     .footer-container {
-      @apply grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 w-full;
+      @apply grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-0 w-full;
     }
 
     p {
-      @apply text-center md:text-start cursor-pointer;
+      @apply text-center md:text-center cursor-pointer;
     }
 
     .socials {

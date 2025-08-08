@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { project1_tools, project2_tools } from "../constants";
 import { BtnBorder } from "../components/btn_border";
+import { ExternalLink, Github } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -56,10 +57,20 @@ const ShowcaseSection = () => {
             <div className="image-wrapper">
               <img src="/images/1.png" alt="Ryde" />
             </div>
-            <div className="flex flex-row space-x-2 py-2">
-              {project1_tools.map((tool) => (
-                <BtnBorder name={tool.name} path={tool.iconPath} />
-              ))}
+            <div className="flex flex-row justify-between items-center py-2">
+              <div className="flex flex-row space-x-2">
+                {project1_tools.map((tool) => (
+                  <BtnBorder name={tool.name} path={tool.iconPath} />
+                ))}
+              </div>
+
+              <a
+                href="https://apps.apple.com/ca/app/estatelynx-pocket-listings/id6749465682"
+                target="_blank"
+                className="rounded-lg flex flex-row items-center justify-between w-30 border-2 border-dashed border-black bg-white/90 px-2 py-1 font-semibold text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"
+              >
+                App Store <ExternalLink className="size-5" />
+              </a>
             </div>
             <div className="text-content">
               <h2>Buying and Selling Off-Market made simple</h2>
@@ -76,10 +87,29 @@ const ShowcaseSection = () => {
               <div className="image-wrapper bg-[#f4e7a6]">
                 <img src="/images/2.png" alt="Graduate TA Handbook" />
               </div>
-              <div className="flex flex-row space-x-2 ml-0.5 py-2">
-                {project2_tools.map((tool) => (
-                  <BtnBorder name={tool.name} path={tool.iconPath} />
-                ))}
+              <div className="flex flex-row justify-between items-center  py-2">
+                <div className="flex flex-row  ml-0.5 space-x-2">
+                  {project2_tools.map((tool) => (
+                    <BtnBorder name={tool.name} path={tool.iconPath} />
+                  ))}
+                </div>
+                <div className="flex-row flex gap-2">
+                  <a
+                    href="https://github.com/dal-csed/Ta-handbook"
+                    target="_blank"
+                    className="rounded-lg flex flex-row items-center justify-between w-25 border-2 border-dashed border-black bg-white/90 px-2 py-1 font-semibold text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"
+                  >
+                    GitHub <Github className="size-5" />
+                  </a>
+
+                  <a
+                    href="https://csed-graduate-ta-handbook.cs.dal.ca/"
+                    target="_blank"
+                    className="rounded-lg flex flex-row items-center justify-between w-20 border-2 border-dashed border-black bg-white/90 px-2 py-1 font-semibold text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"
+                  >
+                    View <ExternalLink className="size-5" />
+                  </a>
+                </div>
               </div>
               <h2>Graduate TA Handbook</h2>
             </div>
