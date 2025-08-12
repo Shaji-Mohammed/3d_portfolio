@@ -116,9 +116,33 @@ const ShowcaseSection = () => {
 
             <div className="project" ref={project3Ref}>
               <div className="image-wrapper bg-[#ffe7eb]">
-                <img src="/images/project3.png" alt="Lyft" />
+                <img src="/images/project3.jpeg" alt="Lyft" />
               </div>
-              <h2>TC Directory - Start-up showcase</h2>
+              <div className="flex flex-row justify-between items-center  py-2">
+                <div className="flex flex-row  ml-0.5 space-x-2">
+                  {project2_tools.map((tool) => (
+                    <BtnBorder name={tool.name} path={tool.iconPath} />
+                  ))}
+                </div>
+                <div className="flex-row flex gap-2">
+                  <a
+                    href="https://github.com/Shaji-Mohammed/e-commerce"
+                    target="_blank"
+                    className="rounded-lg flex flex-row items-center justify-between w-25 border-2 border-dashed border-black bg-white/90 px-2 py-1 font-semibold text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"
+                  >
+                    GitHub <Github className="size-5" />
+                  </a>
+
+                  {/* <a
+                    href="https://csed-graduate-ta-handbook.cs.dal.ca/"
+                    target="_blank"
+                    className="rounded-lg flex flex-row items-center justify-between w-20 border-2 border-dashed border-black bg-white/90 px-2 py-1 font-semibold text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"
+                  >
+                    View <ExternalLink className="size-5" />
+                  </a> */}
+                </div>
+              </div>
+              <h2>80s Hair Oil</h2>
             </div>
           </div>
         </div>
