@@ -1,8 +1,13 @@
 import { useRef, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
+import * as THREE from "three";
 
-const Particles = ({ count = 200 }) => {
-  const mesh = useRef();
+interface ParticlesProps {
+  count?: number;
+}
+
+const Particles: React.FC<ParticlesProps> = ({ count = 200 }) => {
+  const mesh = useRef<THREE.Points>(null!);
 
   const particles = useMemo(() => {
     const temp = [];
@@ -42,9 +47,7 @@ const Particles = ({ count = 200 }) => {
       <bufferGeometry>
         <bufferAttribute
           attach="attributes-position"
-          count={count}
-          array={positions}
-          itemSize={3}
+          args={[positions, 3]}
         />
       </bufferGeometry>
       <pointsMaterial

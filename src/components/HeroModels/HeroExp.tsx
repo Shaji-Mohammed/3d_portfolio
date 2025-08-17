@@ -1,5 +1,6 @@
 import { Canvas } from "@react-three/fiber";
 import { useMediaQuery } from "react-responsive";
+// @ts-ignore
 import { Room } from "./Room.jsx";
 import { OrbitControls } from "@react-three/drei";
 import HeroLights from "./HeroLights.js";

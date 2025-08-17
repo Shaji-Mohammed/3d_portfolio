@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ExpSection = () => {
   useGSAP(() => {
-    gsap.utils.toArray(".timeline-card").forEach((card) => {
+    gsap.utils.toArray<HTMLElement>(".timeline-card").forEach((card) => {
       gsap.from(card, {
         xPercent: -100,
         opacity: 0,
@@ -38,7 +38,7 @@ const ExpSection = () => {
       },
     });
 
-    gsap.utils.toArray(".expText").forEach((text) => {
+    gsap.utils.toArray<HTMLElement>(".expText").forEach((text) => {
       gsap.from(text, {
         xPercent: 0,
         opacity: 0,

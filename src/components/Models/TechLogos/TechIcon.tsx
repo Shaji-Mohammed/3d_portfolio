@@ -1,8 +1,10 @@
 import { Environment, Float, OrbitControls, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
+import type { GLTF } from "three-stdlib";
+// @ts-ignore
 import {Aws_logo} from './Aws_logo';
 
-const TechIcon = ({ model }) => {
+const TechIcon = ({ model } : any) => {
   if (model.name === "AWS") {
     return (
       <Canvas>
@@ -20,7 +22,7 @@ const TechIcon = ({ model }) => {
     );
   }
 
-  const scene = useGLTF(model.modelPath);
+  const scene = useGLTF(model.modelPath) as GLTF;
 
   return (
     <Canvas>

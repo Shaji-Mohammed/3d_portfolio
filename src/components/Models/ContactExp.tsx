@@ -1,7 +1,7 @@
 import { Environment, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
+// @ts-ignore
 import { Computer } from "./Gaming_setup.jsx";
-import React from "react";
 
 const ContactExp = () => {
   return (
