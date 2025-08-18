@@ -2,10 +2,13 @@ import { Environment, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 // @ts-ignore
 import { Computer } from "./Gaming_setup.jsx";
+import { useMediaQuery } from "react-responsive";
 
 const ContactExp = () => {
+  const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
+
   return (
-    <Canvas camera={{ position: [2, 2, 5], fov: 42.5 }} shadows>
+    <Canvas camera={{ position: [2, 2, 5], fov: isMobile? 52 : 42.5 }} shadows>
       <ambientLight intensity={0.5} color={"#fff4e6"} />
       <directionalLight castShadow position={[5, 5, 3]} intensity={1} />
       <spotLight

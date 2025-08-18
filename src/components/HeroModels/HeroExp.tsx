@@ -8,13 +8,14 @@ import Particles from "./Particles.js";
 import { Suspense } from "react";
 
 const HeroExp = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 768x)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
 
   return (
-    <Canvas camera={{ position: [0, 0, 15], fov: 55 }}>
+    <Canvas camera={{ position: [0, 0, 15], fov: isMobile ? 30 : 55 }}>
       <ambientLight intensity={0.2} color="#1a1a40" />
 
       <OrbitControls
+        enabled={!isMobile}
         enablePan={false}
         enableZoom={false}
         maxDistance={10}
