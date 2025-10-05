@@ -11,7 +11,10 @@ const HeroExp = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
 
   return (
-    <Canvas camera={{ position: [0, 0, 15], fov: isMobile ? 30 : 55 }}>
+    <Canvas
+      camera={{ position: [0, 0, 15], fov: isMobile ? 30 : 55 }}
+      style={{ pointerEvents: isMobile ? "none" : "auto" }}
+    >
       <ambientLight intensity={0.2} color="#1a1a40" />
 
       <OrbitControls
