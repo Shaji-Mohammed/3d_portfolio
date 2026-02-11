@@ -19,12 +19,12 @@ const navLinks = [
 ];
 
 const words = [
-  { text: "Web Developer", imgPath: "/images/ideas.svg" },
   { text: "Software Engineer", imgPath: "/images/concepts.svg" },
+  { text: "Web Developer", imgPath: "/images/ideas.svg" },
   { text: "Problem Solver", imgPath: "/images/designs.svg" },
   { text: "Trader", imgPath: "/images/code.svg" },
-  { text: "Web Developer", imgPath: "/images/ideas.svg" },
   { text: "Software Engineer", imgPath: "/images/concepts.svg" },
+  { text: "Web Developer", imgPath: "/images/ideas.svg" },
   { text: "Problem Solver", imgPath: "/images/designs.svg" },
   { text: "Trader", imgPath: "/images/code.svg" },
 ];
@@ -280,8 +280,6 @@ const expLogos = [
     imgPath: "/images/logo3.png",
   },
 ];
-
-
 
 // const socialIcons = [
 //   {

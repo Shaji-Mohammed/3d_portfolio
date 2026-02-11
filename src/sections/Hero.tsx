@@ -19,22 +19,23 @@ const Hero = () => {
         stagger: 0.2,
         duration: 1,
         ease: "power2.inOut",
-      }
+      },
     );
   });
 
   return (
     <section id="hero" className="relative overflow-hidden">
       <div className="absolute top-0 left-0 z-10">
-        <img src="/images/bg.png" alt="background" />
+        {/* <img src="/images/bg.png" alt="background" /> */}
       </div>
 
       <div className="hero-layout">
         <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
           <div className="flex flex-col gap-7">
             <div className="hero-text">
-              <h1 className="text-white-50 relative z-10 pointer-events-none">
-                Hi, I'm Shaji,
+              <p className="text-xl font-baskerville text-red-600">Hello</p>
+              <h1 className="text-5xl font-baskerville text-white-50 relative z-10 pointer-events-none">
+                I'm Shaji
               </h1>
               <h1 className="">
                 a
@@ -43,7 +44,7 @@ const Hero = () => {
                     {words.map((word: any) => (
                       <span
                         key={word.text}
-                        className="flex items-center md:gap-3 gap-1"
+                        className="flex items-center md:gap-3 gap-1 text-blue-400"
                       >
                         <span>{word.text}</span>
                       </span>
@@ -54,11 +55,12 @@ const Hero = () => {
             </div>
 
             <div className="mt-[-20px]">
-              <p className="text-xl">
-                I'm a recent Computer Science Graduate from Dalhousie
-                University.
+              <p className="text-xl font-baskerville">
+                Computer Science Graduate from Dalhousie University.
               </p>
-              <p className="text-xl">Focused on solving Real World problems</p>
+              <p className="text-xl font-baskerville">
+                Focused on solving Real World problems
+              </p>
             </div>
 
             <Button
@@ -70,14 +72,14 @@ const Hero = () => {
         </header>
 
         {/* 3D Model */}
-        <figure>
+        {/* <figure>
           <div className="hero-3d-layout">
             <HeroExp />
           </div>
-        </figure>
+        </figure> */}
       </div>
 
-      <AnimatedCounter />
+      {/* <AnimatedCounter /> */}
     </section>
   );
 };
