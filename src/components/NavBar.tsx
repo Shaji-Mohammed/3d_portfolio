@@ -1,19 +1,29 @@
-"use client"
+"use client";
 
-import React from "react"
-import { CalendarIcon, HomeIcon, MailIcon, PencilIcon } from "lucide-react"
+import React, { useEffect, useState } from "react";
+import {
+  CalendarIcon,
+  HomeIcon,
+  MailIcon,
+  PencilIcon,
+  BriefcaseBusiness,
+  Sun,
+  Moon,
+} from "lucide-react";
+import { FaDownload, FaEnvelope, FaHome, FaBriefcase, FaFileSignature } from "react-icons/fa";
 
-import { cn } from "@/lib/utils"
-import { Separator } from "@/components/ui/separator"
+import { cn } from "@/lib/utils";
+import { Separator } from "@/components/ui/separator";
+import { buttonVariants } from "@/components/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip"
-import { Dock, DockIcon } from "./ui/dock"
+} from "@/components/ui/tooltip";
+import { Dock, DockIcon } from "./ui/dock";
 
-export type IconProps = React.HTMLAttributes<SVGElement>
+export type IconProps = React.HTMLAttributes<SVGElement>;
 
 const Icons = {
   calendar: (props: IconProps) => <CalendarIcon {...props} />,
@@ -24,15 +34,6 @@ const Icons = {
       <path
         fill="currentColor"
         d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-      />
-    </svg>
-  ),
-  x: (props: IconProps) => (
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
-      <title>X</title>
-      <path
-        fill="currentColor"
-        d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
       />
     </svg>
   ),
@@ -57,44 +58,92 @@ const Icons = {
       ></path>
     </svg>
   ),
-}
+};
 
 const DATA = {
   navbar: [
-    { href: "#", icon: HomeIcon, label: "Home" },
-    { href: "#", icon: PencilIcon, label: "Blog" },
+    { href: "#", icon: FaHome, label: "Home" },
+    { href: "#work", icon: FaBriefcase, label: "Work" },
+    { href: "#", icon: FaFileSignature, label: "Blog" },
   ],
   contact: {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "#",
+        url: "https://github.com/Shaji-Mohammed",
         icon: Icons.github,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "#",
+        url: "https://www.linkedin.com/in/shaji-mohd/",
         icon: Icons.linkedin,
       },
-      X: {
-        name: "X",
-        url: "#",
-        icon: Icons.x,
+      Resume: {
+        name: "Resume",
+        url: "/Resume_Shaji.pdf",
+        icon: FaDownload,
       },
       email: {
         name: "Send Email",
-        url: "#",
-        icon: Icons.email,
+        url: "mailto:mshajisufiyan@gmail.com",
+        icon: FaEnvelope,
       },
     },
   },
-}
+};
 
 export function NavBar() {
+  const [darkMode, setDarkMode] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+
+    // Check for saved theme preference or default to light mode
+    const savedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
+
+    const shouldBeDark = savedTheme === "dark" || (!savedTheme && prefersDark);
+
+    if (shouldBeDark) {
+      document.documentElement.classList.add("dark");
+      setDarkMode(true);
+    } else {
+      document.documentElement.classList.remove("dark");
+      setDarkMode(false);
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const isDark = !darkMode;
+
+    if (isDark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+
+    setDarkMode(isDark);
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  };
+
+  // Prevent flash of unstyled content
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <div className="flex flex-col items-center justify-center">
       <TooltipProvider>
         <Dock direction="middle">
+          <img
+            src="/images/logo.png"
+            alt="Logo"
+            className="size-10 rounded-full mr-5"
+          />
+
           {DATA.navbar.map((item) => (
             <DockIcon key={item.label}>
               <Tooltip>
@@ -103,10 +152,11 @@ export function NavBar() {
                     href={item.href}
                     aria-label={item.label}
                     className={cn(
-                      "size-12 rounded-full"
+                      buttonVariants({ variant: "ghost", size: "icon" }),
+                      "size-12 rounded-full",
                     )}
                   >
-                    <item.icon className="size-4" />
+                    <item.icon className="size-5" />
                   </a>
                 </TooltipTrigger>
                 <TooltipContent>
@@ -115,7 +165,7 @@ export function NavBar() {
               </Tooltip>
             </DockIcon>
           ))}
-          <Separator orientation="vertical" className="h-full" />
+          <Separator orientation="vertical" className="h-full mx-4" />
           {Object.entries(DATA.contact.social).map(([name, social]) => (
             <DockIcon key={name}>
               <Tooltip>
@@ -123,11 +173,14 @@ export function NavBar() {
                   <a
                     href={social.url}
                     aria-label={social.name}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={cn(
-                      "size-12 rounded-full"
+                      buttonVariants({ variant: "ghost", size: "icon" }),
+                      "size-12 rounded-full",
                     )}
                   >
-                    <social.icon className="size-4" />
+                    <social.icon className="size-5" />
                   </a>
                 </TooltipTrigger>
                 <TooltipContent>
@@ -136,8 +189,29 @@ export function NavBar() {
               </Tooltip>
             </DockIcon>
           ))}
+          <Separator orientation="vertical" className="h-full mx-4" />
+          <DockIcon>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <button
+                  onClick={toggleTheme}
+                  aria-label="Toggle theme"
+                  className="size-12 rounded-full flex items-center justify-center hover:bg-accent transition-colors"
+                >
+                  {darkMode ? (
+                    <Sun className="size-5 transition-transform hover:rotate-180 duration-500" />
+                  ) : (
+                    <Moon className="size-5 transition-transform hover:-rotate-12 duration-300" />
+                  )}
+                </button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>{darkMode ? "Light Mode" : "Dark Mode"}</p>
+              </TooltipContent>
+            </Tooltip>
+          </DockIcon>
         </Dock>
       </TooltipProvider>
     </div>
-  )
+  );
 }

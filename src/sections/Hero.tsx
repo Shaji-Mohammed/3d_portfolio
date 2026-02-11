@@ -34,8 +34,8 @@ const Hero = () => {
           <div className="flex flex-col gap-7">
             <div className="hero-text">
               <p className="text-xl font-baskerville text-red-600">Hello</p>
-              <h1 className="text-5xl font-baskerville text-white-50 relative z-10 pointer-events-none">
-                I'm Shaji
+              <h1 className="text-5xl font-baskerville text-black-50 dark:text-white-50 relative z-10 pointer-events-none">
+                I'm Shaji,
               </h1>
               <h1 className="">
                 a
@@ -44,7 +44,7 @@ const Hero = () => {
                     {words.map((word: any) => (
                       <span
                         key={word.text}
-                        className="flex items-center md:gap-3 gap-1 text-blue-400"
+                        className="flex items-center md:gap-3 gap-1 dark:text-blue-400 text-blue-600"
                       >
                         <span>{word.text}</span>
                       </span>
