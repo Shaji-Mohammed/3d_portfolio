@@ -4,6 +4,7 @@ import HeroExp from "../components/HeroModels/HeroExp.tsx";
 import AnimatedCounter from "../components/AnimatedCounter";
 import { words } from "../constants/index.ts";
 import gsap from "gsap";
+import { PulsatingButton } from "@/components/ui/pulsating-button.tsx";
 
 const Hero = () => {
   useGSAP(() => {
@@ -25,10 +26,6 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative overflow-hidden">
-      <div className="absolute top-0 left-0 z-10">
-        {/* <img src="/images/bg.png" alt="background" /> */}
-      </div>
-
       <div className="hero-layout">
         <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
           <div className="flex flex-col gap-7">
@@ -63,11 +60,18 @@ const Hero = () => {
               </p>
             </div>
 
-            <Button
+            {/* <Button
               className="md:w-80 md:h-16 w-60 h-12"
               id="button"
               text="See my Work"
-            />
+            /> */}
+            <PulsatingButton 
+              className="md:w-80 md:h-16 w-60 h-12"
+              pulseColor="#808080"
+              duration="2s"
+            >
+              See My Work
+            </PulsatingButton>
           </div>
         </header>
 
