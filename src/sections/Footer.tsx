@@ -44,7 +44,7 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col justify-center">
-          <p className="text-center md:text-center">
+          <p className="text-center md:text-center font-baskerville">
             &copy; {new Date().getFullYear()} Shaji Mohammed. All rights
             reserved.
           </p>

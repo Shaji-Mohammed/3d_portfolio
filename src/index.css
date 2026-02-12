@@ -196,7 +196,7 @@ section {
   }
 
   .app-showcase {
-    @apply w-full mt-10 px-5 md:px-20 py-10 md:py-20 flex items-center justify-center;
+    @apply w-full mt-5 px-5 md:px-20 py-10 md:py-10 flex items-center justify-center;
 
     .showcaselayout {
       @apply flex xl:flex-row flex-col gap-10 justify-between;
@@ -609,4 +609,10 @@ section {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }

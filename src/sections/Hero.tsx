@@ -28,6 +28,8 @@ const Hero = () => {
     <section id="hero" className="relative overflow-hidden">
       <div className="hero-layout">
         <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
+          <img src="images/self.jpeg" className="size-54 rounded-full mb-10" />
+
           <div className="flex flex-col gap-7">
             <div className="hero-text">
               <p className="text-xl font-baskerville text-red-600">Hello</p>
@@ -60,27 +62,16 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* <Button
-              className="md:w-80 md:h-16 w-60 h-12"
-              id="button"
-              text="See my Work"
-            /> */}
-            <PulsatingButton 
-              className="md:w-80 md:h-16 w-60 h-12"
+            <PulsatingButton
+              className="md:w-40 md:h-12 w-60 h-12"
               pulseColor="#808080"
               duration="2s"
+              id="button"
             >
               See My Work
             </PulsatingButton>
           </div>
         </header>
-
-        {/* 3D Model */}
-        {/* <figure>
-          <div className="hero-3d-layout">
-            <HeroExp />
-          </div>
-        </figure> */}
       </div>
 
       {/* <AnimatedCounter /> */}

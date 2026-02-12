@@ -28,10 +28,9 @@ const TechStack = () => {
   return (
     <div id="skills" className="flex-center py-10 section-padding">
       <div className="w-full h-full md:px-10 px-5">
-        <TitleHeader
-          title="My Preserred Tech Stack"
-          sub="The skills I bring to the Table"
-        />
+        <h3 className="justify-center items-center text-3xl md:text-4xl font-baskerville mb-8 text-center">
+          My Tech Stack
+        </h3>
         <div className="tech-grid">
           {techStackIcons.map((icon) => (
             <div

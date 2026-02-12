@@ -74,7 +74,7 @@ const ShowcaseSection = () => {
             </div>
             <div className="text-content">
               <h2>Buying and Selling Off-Market made simple</h2>
-              <p className="text-white-50 md:text-xl">
+              <p className="ml-0.5 md:text-xl">
                 An App built for Real Estate Agents to buy and sell off-market
                 properties.
               </p>

@@ -1,16 +1,15 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { CalendarIcon, MailIcon, Sun, Moon } from "lucide-react";
 import {
-  CalendarIcon,
-  HomeIcon,
-  MailIcon,
-  PencilIcon,
-  BriefcaseBusiness,
-  Sun,
-  Moon,
-} from "lucide-react";
-import { FaDownload, FaEnvelope, FaHome, FaBriefcase, FaFileSignature } from "react-icons/fa";
+  FaDownload,
+  FaEnvelope,
+  FaHome,
+  FaBriefcase,
+  FaFileSignature,
+  FaPython
+} from "react-icons/fa";
 
 import { cn } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
@@ -22,6 +21,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Dock, DockIcon } from "./ui/dock";
+import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -65,6 +65,7 @@ const DATA = {
     { href: "#", icon: FaHome, label: "Home" },
     { href: "#work", icon: FaBriefcase, label: "Work" },
     { href: "#", icon: FaFileSignature, label: "Blog" },
+    { href: "#skills", icon: FaPython, label: "Skills" },
   ],
   contact: {
     social: {
@@ -93,51 +94,11 @@ const DATA = {
 };
 
 export function NavBar() {
-  const [darkMode, setDarkMode] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-
-    // Check for saved theme preference or default to light mode
-    const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)",
-    ).matches;
-
-    const shouldBeDark = savedTheme === "dark" || (!savedTheme && prefersDark);
-
-    if (shouldBeDark) {
-      document.documentElement.classList.add("dark");
-      setDarkMode(true);
-    } else {
-      document.documentElement.classList.remove("dark");
-      setDarkMode(false);
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    const isDark = !darkMode;
-
-    if (isDark) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-
-    setDarkMode(isDark);
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-  };
-
-  // Prevent flash of unstyled content
-  if (!mounted) {
-    return null;
-  }
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className=" flex flex-col justify-center items-center">
       <TooltipProvider>
-        <Dock direction="middle">
+        <Dock direction="middle" className="fixed z-[100] top-0">
           <img
             src="/images/logo.png"
             alt="Logo"
@@ -193,7 +154,8 @@ export function NavBar() {
           <DockIcon>
             <Tooltip>
               <TooltipTrigger asChild>
-                <button
+                <AnimatedThemeToggler className="size-12 rounded-full flex items-center justify-center hover:bg-accent transition-colors" />
+                {/* <button
                   onClick={toggleTheme}
                   aria-label="Toggle theme"
                   className="size-12 rounded-full flex items-center justify-center hover:bg-accent transition-colors"
@@ -203,10 +165,10 @@ export function NavBar() {
                   ) : (
                     <Moon className="size-5 transition-transform hover:-rotate-12 duration-300" />
                   )}
-                </button>
+                </button> */}
               </TooltipTrigger>
               <TooltipContent>
-                <p>{darkMode ? "Light Mode" : "Dark Mode"}</p>
+                <p>Toggle Theme</p>
               </TooltipContent>
             </Tooltip>
           </DockIcon>

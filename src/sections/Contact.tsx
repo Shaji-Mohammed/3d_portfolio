@@ -13,7 +13,7 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e : any) => {
+  const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -21,7 +21,7 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = async (e : any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
 
     setLoading(true);
@@ -30,7 +30,7 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         formRef.current!,
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
       );
     } catch (error) {
       console.log(error);
@@ -45,8 +45,9 @@ const Contact = () => {
   return (
     <section id="contact" className="flex-center section-padding">
       <div className="w-full h-full md:px-10 px-5">
-        <TitleHeader title="Get In Touch With Me" sub={"Contact Information"} />
-
+        <p className="justify-center items-center text-3xl md:text-4xl font-baskerville mb-8 text-center">
+          Get In Touch With Me
+        </p>
         <div className="mt-6 grid-12-cols">
           {/* Contact Form - Left */}
           <div className="xl:col-span-5">

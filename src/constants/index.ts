@@ -169,12 +169,8 @@ const project1_tools = [
     iconPath: "/images/React.png",
   },
   {
-    name: "Expo",
-    iconPath: "/images/Expo.png",
-  },
-  {
-    name: "NativeWind",
-    iconPath: "/images/Tailwind.png",
+    name: "Django",
+    iconPath: "/images/Django.png",
   },
   {
     name: "Azure",
@@ -185,8 +181,8 @@ const project1_tools = [
     iconPath: "/images/PostgreSQL.png",
   },
   {
-    name: "Django",
-    iconPath: "/images/Django.png",
+    name: "NativeWind",
+    iconPath: "/images/Tailwind.png",
   },
 ];
 
