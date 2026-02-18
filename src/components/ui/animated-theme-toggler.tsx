@@ -35,9 +35,18 @@ export const AnimatedThemeToggler = forwardRef<
   );
 
   useEffect(() => {
+    // 1. Check if a theme is stored; if not, default to "dark"
+    if (!localStorage.getItem("theme")) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    }
+
+    // 2. Update internal state based on the DOM
     const updateTheme = () =>
       setIsDark(document.documentElement.classList.contains("dark"));
+
     updateTheme();
+
     const observer = new MutationObserver(updateTheme);
     observer.observe(document.documentElement, {
       attributes: true,

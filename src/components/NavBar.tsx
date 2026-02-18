@@ -155,17 +155,7 @@ export function NavBar() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <AnimatedThemeToggler className="size-12 rounded-full flex items-center justify-center hover:bg-accent transition-colors" />
-                {/* <button
-                  onClick={toggleTheme}
-                  aria-label="Toggle theme"
-                  className="size-12 rounded-full flex items-center justify-center hover:bg-accent transition-colors"
-                >
-                  {darkMode ? (
-                    <Sun className="size-5 transition-transform hover:rotate-180 duration-500" />
-                  ) : (
-                    <Moon className="size-5 transition-transform hover:-rotate-12 duration-300" />
-                  )}
-                </button> */}
+                
               </TooltipTrigger>
               <TooltipContent>
                 <p>Toggle Theme</p>

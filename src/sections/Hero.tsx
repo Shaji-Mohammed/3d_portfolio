@@ -1,6 +1,4 @@
 import { useGSAP } from "@gsap/react";
-import Button from "../components/Button.js";
-import HeroExp from "../components/HeroModels/HeroExp.tsx";
 import AnimatedCounter from "../components/AnimatedCounter";
 import { words } from "../constants/index.ts";
 import gsap from "gsap";
@@ -27,7 +25,7 @@ const Hero = () => {
   return (
     <section id="hero" className="relative overflow-hidden">
       <div className="hero-layout">
-        <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
+        <header className="flex flex-col justify-between md:w-[60%] w-screen md:px-20 px-5">
           <img src="images/self.jpeg" className="size-54 rounded-full mb-10" />
 
           <div className="flex flex-col gap-7">
@@ -72,9 +70,13 @@ const Hero = () => {
             </PulsatingButton>
           </div>
         </header>
-      </div>
 
-      {/* <AnimatedCounter /> */}
+        <div className="flex flex-col md:w-[40%] justify-center items-center">
+          <h3 className="text-2xl font-baskerville text-black-50 dark:text-white-50">Experience</h3>
+          <div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
