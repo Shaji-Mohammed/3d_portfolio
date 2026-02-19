@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { CalendarIcon, MailIcon, Sun, Moon } from "lucide-react";
+import React from "react";
+import { CalendarIcon, MailIcon } from "lucide-react";
 import {
   FaDownload,
   FaEnvelope,

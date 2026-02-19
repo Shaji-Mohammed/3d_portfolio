@@ -17,7 +17,13 @@ export const AnimatedThemeToggler = forwardRef<
   HTMLButtonElement,
   AnimatedThemeTogglerProps
 >(({ className, duration = 400, onClick, ...props }, ref) => {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(() => {
+    // Read the DOM directly (set by the inline script in index.html)
+    if (typeof document !== "undefined") {
+      return document.documentElement.classList.contains("dark");
+    }
+    return true; // SSR fallback: default dark
+  });
   const internalRef = useRef<HTMLButtonElement>(null);
 
   // Sync internal ref with external ref (from TooltipTrigger)
