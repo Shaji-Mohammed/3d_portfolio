@@ -21,11 +21,11 @@ const navLinks = [
 const words = [
   { text: "Software Engineer", imgPath: "/images/concepts.svg" },
   { text: "Web Developer", imgPath: "/images/ideas.svg" },
+  { text: "Full Stack Developer", imgPath: "/images/concepts.svg" },
+  { text: "Frontend Developer", imgPath: "/images/ideas.svg" },
+  { text: "Mobile Developer", imgPath: "/images/ideas.svg" },
   { text: "Problem Solver", imgPath: "/images/designs.svg" },
-  { text: "Trader", imgPath: "/images/code.svg" },
-  { text: "Software Engineer", imgPath: "/images/concepts.svg" },
-  { text: "Web Developer", imgPath: "/images/ideas.svg" },
-  { text: "Problem Solver", imgPath: "/images/designs.svg" },
+  { text: "Tech Enthusiast", imgPath: "/images/concepts.svg" },
   { text: "Trader", imgPath: "/images/code.svg" },
 ];
 
@@ -37,54 +37,20 @@ const counterItems = [
 ];
 
 const logoIconsList = [
-  {
-    imgPath: "/images/Ashored.png",
-    name: "Ashored",
-  },
-  {
-    imgPath: "/images/Protocase.png",
-    name: "company-logo",
-  },
-  {
-    imgPath: "/images/EstateLynx.png",
-    name: "company-logo",
-  },
-  {
-    imgPath: "/images/dal.png",
-    name: "company-logo",
-  },
-  {
-    imgPath: "/images/Ashored.png",
-    name: "Ashored",
-  },
-  {
-    imgPath: "/images/Protocase.png",
-    name: "company-logo",
-  },
-  {
-    imgPath: "/images/EstateLynx.png",
-    name: "company-logo",
-  },
-  {
-    imgPath: "/images/dal.png",
-    name: "company-logo",
-  },
-  {
-    imgPath: "/images/Ashored.png",
-    name: "Ashored",
-  },
-  {
-    imgPath: "/images/Protocase.png",
-    name: "company-logo",
-  },
-  {
-    imgPath: "/images/EstateLynx.png",
-    name: "company-logo",
-  },
-  {
-    imgPath: "/images/dal.png",
-    name: "company-logo",
-  },
+  { id: 1, imgPath: "/images/Ashored.png", name: "Ashored" },
+  { id: 2, imgPath: "/images/Protocase.png", name: "company-logo" },
+  { id: 3, imgPath: "/images/EstateLynx.png", name: "company-logo" },
+  { id: 4, imgPath: "/images/dal.png", name: "company-logo" },
+
+  { id: 5, imgPath: "/images/Ashored.png", name: "Ashored" },
+  { id: 6, imgPath: "/images/Protocase.png", name: "company-logo" },
+  { id: 7, imgPath: "/images/EstateLynx.png", name: "company-logo" },
+  { id: 8, imgPath: "/images/dal.png", name: "company-logo" },
+
+  { id: 9, imgPath: "/images/Ashored.png", name: "Ashored" },
+  { id: 10, imgPath: "/images/Protocase.png", name: "company-logo" },
+  { id: 11, imgPath: "/images/EstateLynx.png", name: "company-logo" },
+  { id: 12, imgPath: "/images/dal.png", name: "company-logo" },
 ];
 
 const abilities = [

@@ -124,7 +124,7 @@ section {
   }
 
   .hero-text {
-    @apply flex flex-col justify-center md:text-[40px] sm:w-[50%] text-[40px] font-baskerville relative z-10 pointer-events-none;
+    @apply flex flex-col justify-center md:text-[40px] sm:w-[55%] text-[40px] font-baskerville relative z-10 pointer-events-none;
 
     img {
       @apply size-8 md:size-10 object-contain;

@@ -60,7 +60,7 @@ const ShowcaseSection = () => {
             <div className="flex flex-row justify-between items-center py-2">
               <div className="flex flex-row space-x-2">
                 {project1_tools.map((tool) => (
-                  <BtnBorder name={tool.name} path={tool.iconPath} />
+                  <BtnBorder name={tool.name} key={tool.name} path={tool.iconPath} />
                 ))}
               </div>
 
@@ -90,7 +90,7 @@ const ShowcaseSection = () => {
               <div className="flex flex-row justify-between items-center  py-2">
                 <div className="flex flex-row  ml-0.5 space-x-2">
                   {project2_tools.map((tool) => (
-                    <BtnBorder name={tool.name} path={tool.iconPath} />
+                    <BtnBorder name={tool.name} key={tool.name} path={tool.iconPath} />
                   ))}
                 </div>
                 <div className="flex-row flex gap-2">
@@ -121,7 +121,7 @@ const ShowcaseSection = () => {
               <div className="flex flex-row justify-between items-center  py-2">
                 <div className="flex flex-row  ml-0.5 space-x-2">
                   {project2_tools.map((tool) => (
-                    <BtnBorder name={tool.name} path={tool.iconPath} />
+                    <BtnBorder name={tool.name} key={tool.name} path={tool.iconPath} />
                   ))}
                 </div>
                 <div className="flex-row flex gap-2">

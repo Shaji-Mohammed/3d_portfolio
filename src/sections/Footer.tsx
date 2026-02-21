@@ -26,7 +26,7 @@ const Footer = () => {
           {socialIcons.map((item) => {
             const IconComponent = item.icon;
             return (
-              <div className="flex flex-row items-center space-x-2">
+              <div key={item.name} className="flex flex-row items-center space-x-2">
                 <a
                   href={item.url}
                   key={item.url}
