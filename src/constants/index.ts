@@ -53,6 +53,33 @@ const logoIconsList = [
   { id: 12, imgPath: "/images/dal.png", name: "company-logo" },
 ];
 
+export const Exp_summary = [
+  {
+    postion: "Software Engineer & Co-Founder",
+    company: "EstateLynx",
+    desc:
+      "Our platform stands out through its intuitive design, powerful automation capabilities, and seamless integration options. We've focused on creating a user experience that combines simplicity with advanced features.",
+  },
+  {
+    postion: "Software Developer Intern",
+    company: "Ashored Innovations",
+    desc:
+      "We offer flexible, transparent pricing tiers designed to scale with your needs. Each tier includes a core set of features, with additional capabilities as you move up. All plans start with a 14-day free trial.",
+  },
+  {
+    postion: "Instructional Developer",
+    company: "Dalhousie University",
+    desc:
+      "We offer flexible, transparent pricing tiers designed to scale with your needs. Each tier includes a core set of features, with additional capabilities as you move up. All plans start with a 14-day free trial.",
+  },
+  {
+    postion: "Software Developer Intern",
+    company: "Protocase Inc.",
+    desc:
+      "We provide comprehensive support through multiple channels. This includes 24/7 live chat, detailed documentation, video tutorials, and dedicated account managers for enterprise clients.",
+  },
+];
+
 const abilities = [
   {
     imgPath: "/images/seo.png",

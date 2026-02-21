@@ -1,8 +1,9 @@
 import { useGSAP } from "@gsap/react";
 import AnimatedCounter from "../components/AnimatedCounter";
-import { words } from "../constants/index.ts";
+import { Exp_summary, words } from "../constants/index.ts";
 import gsap from "gsap";
 import { PulsatingButton } from "@/components/ui/pulsating-button.tsx";
+import { FaqSection } from "@/components/blocks/faq.tsx";
 
 const Hero = () => {
   useGSAP(() => {
@@ -25,7 +26,7 @@ const Hero = () => {
   return (
     <section id="hero" className="relative overflow-hidden">
       <div className="hero-layout">
-        <header className="flex flex-col justify-between md:w-[60%] w-screen md:px-20 px-5">
+        <header className="flex flex-col justify-between md:w-[50%] w-screen md:px-20 px-5">
           <img src="images/self.jpeg" className="size-54 rounded-full mb-10" />
 
           <div className="flex flex-col gap-7">
@@ -61,7 +62,7 @@ const Hero = () => {
             </div>
 
             <PulsatingButton
-              className="md:w-40 md:h-12 w-60 h-12"
+              className="md:w-35 md:h-12 w-60 h-12"
               pulseColor="#808080"
               duration="2s"
               id="button"
@@ -71,10 +72,15 @@ const Hero = () => {
           </div>
         </header>
 
-        <div className="flex flex-col md:w-[40%] justify-center items-center">
-          <h3 className="text-2xl font-baskerville text-black-50 dark:text-white-50">Experience</h3>
-          <div>
-          </div>
+        <div className="flex flex-col w-full h-full md:max-w-[50%] justify-center">
+          {/* <h3 className="text-2xl font-baskerville text-black-50 dark:text-white-50">
+            Experience
+          </h3> */}
+          <FaqSection
+            className=""
+            title="Experience"
+            items={Exp_summary}
+          />
         </div>
       </div>
     </section>

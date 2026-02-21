@@ -50,7 +50,7 @@ const Contact = () => {
         </p>
         <div className="mt-6 grid-12-cols">
           {/* Contact Form - Left */}
-          <div className="xl:col-span-5">
+          {/* <div className="xl:col-span-5">
             <div className="flex-center card-border rounded-xl p-10">
               <form
                 ref={formRef}
@@ -109,7 +109,7 @@ const Contact = () => {
                 </button>
               </form>
             </div>
-          </div>
+          </div> */}
           <div className="xl:col-span-7 min-h-96">
             <div className="w-full h-full bg-[#cd7c2e] hover: cursor-grab rounded-3xl overflow-hidden">
               <ContactExp />
