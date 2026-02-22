@@ -28,7 +28,7 @@ const FaqSection = React.forwardRef<HTMLElement, FaqSectionProps>(
     return (
       <section
         ref={ref}
-        className={cn("py-16 w-full items-start", className)}
+        className={cn("py-16 bg-gradient-to-b from-transparent via-muted/50 to-transparent w-full items-start", className)}
         {...props}
       >
         <div className="container">
@@ -37,9 +37,9 @@ const FaqSection = React.forwardRef<HTMLElement, FaqSectionProps>(
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex flex-row justify-center max-w-2xl mx-auto "
+            className="flex flex-row text-center max-w-2xl mx-auto"
           >
-            <h2 className="text-4xl px-4 max-w-lg sm:w-[80%] font-baskerville text-black-50 dark:text-white-50 mb-3 bg-gradient-to-r from-foreground via-foreground/80 to-foreground bg-clip-text">
+            <h2 className="text-4xl max-w-xl m-auto sm:w-[80%] font-baskerville text-black-50 dark:text-white-50 mb-3 bg-gradient-to-r from-foreground via-foreground/80 to-foreground bg-clip-text">
               {title}
             </h2>
             {description && (
@@ -48,7 +48,7 @@ const FaqSection = React.forwardRef<HTMLElement, FaqSectionProps>(
           </motion.div>
 
           {/* FAQ Items */}
-          <div className="max-w-lg mx-auto  space-y-2">
+          <div className="max-w-xl mx-auto space-y-2">
             {items.map((item, index) => (
               <FaqItem
                 key={index}

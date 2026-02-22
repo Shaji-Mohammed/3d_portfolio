@@ -72,7 +72,7 @@ const Hero = () => {
           </div>
         </header>
 
-        <div className="flex flex-col w-full h-full md:max-w-[50%] justify-center">
+        <div className="flex flex-col w-full h-full md:max-w-[50%] md:mt-30 mt-10">
           <FaqSection 
             title="Work Experience" 
             items={Exp_summary} 

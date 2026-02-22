@@ -55,28 +55,28 @@ const logoIconsList = [
 
 export const Exp_summary = [
   {
-    postion: "Software Engineer & Co-Founder",
+    postion: "Software Engineer",
     company: "EstateLynx",
     duration: "Jan 2025 - Present",
-    desc: "Our platform stands out through its intuitive design, powerful automation capabilities, and seamless integration options. We've focused on creating a user experience that combines simplicity with advanced features.",
+    desc: "Developed an iOS app (React Native, TypeScript) and a Django REST API deployed on Azure, featuring JWT auth, real-time chat, and cloud storage integration.",
   },
   {
     postion: "Software Developer Intern",
     company: "Ashored Innovations",
     duration: "Jan 2024 - Aug 2024",
-    desc: "We offer flexible, transparent pricing tiers designed to scale with your needs. Each tier includes a core set of features, with additional capabilities as you move up. All plans start with a 14-day free trial.",
+    desc: "Built 120+ Python E2E tests for a GraphQL/MySQL backend, and reducing QA through CI/CD automation (Terraform, GitHub Actions). Automated AWS Cognito workflows and migrated an app to Web.",
   },
   {
     postion: "Instructional Developer",
     company: "Dalhousie University",
     duration: "Jan 2023 - Dec 2025",
-    desc: "We offer flexible, transparent pricing tiers designed to scale with your needs. Each tier includes a core set of features, with additional capabilities as you move up. All plans start with a 14-day free trial.",
+    desc: "Developed a TA training website (Next.js) serving 150+ users. Automated academic timetable extraction with Selenium, reducing manual data entry. Developed ETL-style data workflows and dashboards in R and Power BI to support data-driven decision-making.",
   },
   {
     postion: "Software Developer Intern",
     company: "Protocase Inc.",
     duration: "May 2022 - Aug 2022",
-    desc: "We provide comprehensive support through multiple channels. This includes 24/7 live chat, detailed documentation, video tutorials, and dedicated account managers for enterprise clients.",
+    desc: "Developed a full-stack web application using Java, React, and MySQL for AutoCAD uploads with Three.js 3D visualization. Built REST APIs for real-time pricing integration and contributed to Agile sprint planning, UML design, and documentation.",
   },
 ];
 
