@@ -2,10 +2,9 @@
 
 import * as React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Mail } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Separator } from "../ui/separator";
 
 interface FaqSectionProps extends React.HTMLAttributes<HTMLElement> {
   title: string;
@@ -13,6 +12,7 @@ interface FaqSectionProps extends React.HTMLAttributes<HTMLElement> {
   items: {
     postion: string;
     company: string;
+    duration: string;
     desc: string;
   }[];
   contactInfo?: {
@@ -37,9 +37,9 @@ const FaqSection = React.forwardRef<HTMLElement, FaqSectionProps>(
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="max-w-2xl mx-auto text-center mb-6"
+            className="flex flex-row justify-center max-w-2xl mx-auto "
           >
-            <h2 className="text-3xl font-baskerville text-black-50 dark:text-white-50 mb-3 bg-gradient-to-r from-foreground via-foreground/80 to-foreground bg-clip-text">
+            <h2 className="text-4xl px-4 max-w-lg sm:w-[80%] font-baskerville text-black-50 dark:text-white-50 mb-3 bg-gradient-to-r from-foreground via-foreground/80 to-foreground bg-clip-text">
               {title}
             </h2>
             {description && (
@@ -54,6 +54,7 @@ const FaqSection = React.forwardRef<HTMLElement, FaqSectionProps>(
                 key={index}
                 postion={item.postion}
                 company={item.company}
+                duration={item.duration}
                 desc={item.desc}
                 index={index}
               />
@@ -73,11 +74,12 @@ const FaqItem = React.forwardRef<
     postion: string;
     company: string;
     desc: string;
+    duration: string;
     index: number;
   }
 >((props, ref) => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const { postion, company, desc, index } = props;
+  const { postion, company, desc, duration, index } = props;
 
   return (
     <motion.div
@@ -86,45 +88,53 @@ const FaqItem = React.forwardRef<
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.2, delay: index * 0.1 }}
       className={cn(
-        "group rounded-lg",
+        "group rounded-sm",
         "transition-all duration-200 ease-in-out",
 
         isOpen
-          ? "bg-gradient-to-br from-background via-muted/50 to-background"
+          ? ""
           : "hover:bg-muted/50",
       )}
     >
       <Button
         variant="ghost"
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full px-6 py-4 h-auto justify-between hover:bg-transparent"
+        className="w-full px-4 py-2 h-auto justify-between hover:bg-transparent"
       >
         <div className="text-left">
           <h3
             className={cn(
-              "text-base font-medium transition-colors duration-200 text-left",
+              "text-xl font-baskerville transition-colors duration-200 text-left",
               "text-foreground/70",
               isOpen && "text-foreground",
             )}
           >
             {postion}
           </h3>
-          <span className="text-sm text-muted-foreground">{company}</span>
+          <span className="text-base font-baskerville text-muted-foreground">
+            {company}
+          </span>
         </div>
-        <motion.div
-          animate={{
-            rotate: isOpen ? 180 : 0,
-            scale: isOpen ? 1.1 : 1,
-          }}
-          transition={{ duration: 0.2 }}
-          className={cn(
-            "p-0.5 rounded-full flex-shrink-0",
-            "transition-colors duration-200",
-            isOpen ? "text-primary" : "text-muted-foreground",
-          )}
-        >
-          <ChevronDown className="h-4 w-4" />
-        </motion.div>
+
+        <div className="flex flex-col items-end">
+          <span className="text-base font-baskerville text-muted-foreground">
+            {duration}
+          </span>
+          <motion.div
+            animate={{
+              rotate: isOpen ? 180 : 360,
+              scale: isOpen ? 1.1 : 1,
+            }}
+            transition={{ duration: 0.2 }}
+            className={cn(
+              "p-0.5 rounded-full flex-shrink-0",
+              "transition-colors duration-200",
+              isOpen ? "text-primary" : "text-muted-foreground",
+            )}
+          >
+            <ChevronDown className="h-4 w-4" />
+          </motion.div>
+        </div>
       </Button>
       <AnimatePresence initial={false}>
         {isOpen && (
@@ -141,12 +151,12 @@ const FaqItem = React.forwardRef<
               transition: { duration: 0.2, ease: "easeIn" },
             }}
           >
-            <div className="px-6 pb-4 pt-2">
+            <div className="px-4 py-2">
               <motion.p
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: -10, opacity: 0 }}
-                className="text-sm text-muted-foreground leading-relaxed"
+                className="text-base font-baskerville dark:text-white/80 text-black/80 leading-relaxed"
               >
                 {desc}
               </motion.p>

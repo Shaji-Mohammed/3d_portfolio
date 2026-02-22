@@ -35,7 +35,7 @@ const Hero = () => {
               <h1 className="text-5xl font-baskerville text-black-50 dark:text-white-50 relative z-10 pointer-events-none">
                 I'm Shaji,
               </h1>
-              <h1 className="">
+              <h1 className="font-baskerville">
                 a
                 <span className="slide">
                   <span className="wrapper">
@@ -44,7 +44,7 @@ const Hero = () => {
                         key={word.text}
                         className="flex items-center md:gap-3 gap-1 dark:text-blue-400 text-blue-600"
                       >
-                        <span>{word.text}</span>
+                        <span className="font-baskerville">{word.text}</span>
                       </span>
                     ))}
                   </span>
@@ -62,7 +62,7 @@ const Hero = () => {
             </div>
 
             <PulsatingButton
-              className="md:w-35 md:h-12 w-60 h-12"
+              className="md:w-35 font-baskerville md:h-12 w-60 h-12"
               pulseColor="#808080"
               duration="2s"
               id="button"
@@ -73,13 +73,9 @@ const Hero = () => {
         </header>
 
         <div className="flex flex-col w-full h-full md:max-w-[50%] justify-center">
-          {/* <h3 className="text-2xl font-baskerville text-black-50 dark:text-white-50">
-            Experience
-          </h3> */}
-          <FaqSection
-            className=""
-            title="Experience"
-            items={Exp_summary}
+          <FaqSection 
+            title="Work Experience" 
+            items={Exp_summary} 
           />
         </div>
       </div>
