@@ -56,27 +56,27 @@ const logoIconsList = [
 export const Exp_summary = [
   {
     postion: "Software Engineer",
-    company: "EstateLynx",
+    company: "EstateLynx Inc.",
     duration: "Jan 2025 - Present",
-    desc: "Developed an iOS app (React Native, TypeScript) and a Django REST API deployed on Azure, featuring JWT auth, real-time chat, and cloud storage integration.",
+    desc: "Engineered an iOS app (React Native, TypeScript) and a Django REST API deployed on Azure, with JWT auth, real-time chat, and cloud storage integration.",
   },
   {
     postion: "Software Developer Intern",
     company: "Ashored Innovations",
     duration: "Jan 2024 - Aug 2024",
-    desc: "Built 120+ Python E2E tests for a GraphQL/MySQL backend, and reducing QA through CI/CD automation (Terraform, GitHub Actions). Automated AWS Cognito workflows and migrated an app to Web.",
+    desc: "Built 120+ Python E2E tests for a GraphQL API, and reduced QA through CI/CD automation (AWS CodeBuild & GitHub Actions). Automated AWS Cognito workflows and migrated an App to Web.",
   },
   {
     postion: "Instructional Developer",
     company: "Dalhousie University",
     duration: "Jan 2023 - Dec 2025",
-    desc: "Developed a TA training website (Next.js) serving 150+ users. Automated academic timetable extraction with Selenium, reducing manual data entry. Developed ETL-style data workflows and dashboards in R and Power BI to support data-driven decision-making.",
+    desc: "Developed a TA training website (Next.js) serving 150+ users. Automated academic timetable extraction with Selenium, developed ETL-style data workflows and dashboards in R and Power BI to support data-driven decision-making.",
   },
   {
     postion: "Software Developer Intern",
     company: "Protocase Inc.",
     duration: "May 2022 - Aug 2022",
-    desc: "Developed a full-stack web application using Java, React, and MySQL for AutoCAD uploads with Three.js 3D visualization. Built REST APIs for real-time pricing integration and contributed to Agile sprint planning, UML design, and documentation.",
+    desc: "Developed a full-stack webApp using Java and React for AutoCAD uploads with Three.js 3D visualization. Built REST APIs for real-time pricing integration and contributed to Agile sprint planning, UML design, and documentation.",
   },
 ];
 

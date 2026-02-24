@@ -111,13 +111,19 @@ const FaqItem = React.forwardRef<
           >
             {postion}
           </h3>
-          <span className="text-base font-baskerville text-muted-foreground">
+          <span className={cn(
+            "text-base font-baskerville",
+            isOpen ? "text-foreground" : "text-muted-foreground"
+          )}>
             {company}
           </span>
         </div>
 
         <div className="flex flex-col items-end">
-          <span className="text-base font-baskerville text-muted-foreground">
+          <span className={cn(
+            "text-base font-baskerville",
+            isOpen ? "text-foreground" : "text-muted-foreground"
+          )}>
             {duration}
           </span>
           <motion.div
@@ -156,7 +162,7 @@ const FaqItem = React.forwardRef<
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: -10, opacity: 0 }}
-                className="text-base font-baskerville dark:text-white/80 text-black/80 leading-relaxed"
+                className="text-base font-baskerville dark:text-white/70 text-black/80 leading-relaxed"
               >
                 {desc}
               </motion.p>

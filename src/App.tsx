@@ -1,7 +1,6 @@
 import LogoSection from "./sections/LogoSection";
 import Hero from "./sections/Hero";
 import ShowcaseSection from "./sections/ShowcaseSection";
-import ExpSection from "./sections/ExpSection";
 import TechStack from "./sections/TechStack";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
@@ -14,7 +13,6 @@ const App = () => {
       <Hero />
       <LogoSection />
       <ShowcaseSection />
-      {/* <ExpSection /> */}
       <TechStack />
       <Contact />
       <Footer />

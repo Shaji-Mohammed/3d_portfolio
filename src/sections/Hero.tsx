@@ -1,5 +1,4 @@
 import { useGSAP } from "@gsap/react";
-import AnimatedCounter from "../components/AnimatedCounter";
 import { Exp_summary, words } from "../constants/index.ts";
 import gsap from "gsap";
 import { PulsatingButton } from "@/components/ui/pulsating-button.tsx";
@@ -62,12 +61,12 @@ const Hero = () => {
             </div>
 
             <PulsatingButton
-              className="md:w-35 font-baskerville md:h-12 w-60 h-12"
+              className="md:w-35 text-lg font-baskerville font-semibold md:h-12 w-60 h-12"
               pulseColor="#808080"
               duration="2s"
               id="button"
             >
-              See My Work
+              My Work
             </PulsatingButton>
           </div>
         </header>
