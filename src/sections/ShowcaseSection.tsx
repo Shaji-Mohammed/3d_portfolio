@@ -60,8 +60,8 @@ const ShowcaseSection = () => {
             <div className="image-wrapper">
               <img src="/images/1.png" alt="Ryde" />
             </div>
-            <div className="flex flex-row justify-between items-center py-2">
-              <div className="flex flex-row space-x-2">
+            <div className="flex flex-row flex-wrap justify-between items-center py-2">
+              <div className="flex flex-row flex-wrap space-x-2">
                 {project1_tools.map((tool) => (
                   <BtnBorder
                     name={tool.name}
@@ -74,7 +74,7 @@ const ShowcaseSection = () => {
               <a
                 href="https://apps.apple.com/ca/app/estatelynx-pocket-listings/id6749465682"
                 target="_blank"
-                className="font-baskerville text-lg rounded-lg flex flex-row items-center justify-between w-32 border-2 border-dashed dark:border-white border-black dark:bg-black/90 bg-white/90 px-2 py-1 font-semibold transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] dark:hover:shadow-[4px_4px_0px_white] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"
+                className="font-baskerville text-lg rounded-lg mt-2 sm:mt-0 flex flex-row items-center justify-between w-32 border-2 border-dashed dark:border-white border-black dark:bg-black/90 bg-white/90 px-2 py-1 font-semibold transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] dark:hover:shadow-[4px_4px_0px_white] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"
               >
                 App Store <ExternalLink className="size-5" />
               </a>
@@ -94,7 +94,7 @@ const ShowcaseSection = () => {
               <div className="image-wrapper bg-[#f4e7a6]">
                 <img src="/images/2.png" alt="Graduate TA Handbook" />
               </div>
-              <div className="flex flex-row justify-between items-center  py-2">
+              <div className="flex flex-row flex-wrap justify-between items-center  py-2">
                 <div className="flex flex-row  ml-0.5 space-x-2">
                   {project2_tools.map((tool) => (
                     <BtnBorder
@@ -104,7 +104,7 @@ const ShowcaseSection = () => {
                     />
                   ))}
                 </div>
-                <div className="flex-row flex gap-2">
+                <div className="flex-row flex mt-2 sm:mt-0 gap-2">
                   <a
                     href="https://github.com/dal-csed/Ta-handbook"
                     target="_blank"
@@ -129,7 +129,7 @@ const ShowcaseSection = () => {
               <div className="image-wrapper bg-[#ffe7eb]">
                 <img src="/images/project3.jpeg" alt="80s Hair Oil" />
               </div>
-              <div className="flex flex-row justify-between items-center  py-2">
+              <div className="flex flex-row flex-wrap justify-between items-center py-2">
                 <div className="flex flex-row  ml-0.5 space-x-2">
                   {project2_tools.map((tool) => (
                     <BtnBorder
@@ -139,11 +139,11 @@ const ShowcaseSection = () => {
                     />
                   ))}
                 </div>
-                <div className="flex-row flex gap-2">
+                <div className="flex-row flex flex-wrap gap-2">
                   <a
                     href="https://github.com/Shaji-Mohammed/e-commerce"
                     target="_blank"
-                    className="font-baskerville text-lg rounded-lg flex flex-row items-center justify-between w-26 border-2 border-dashed dark:border-white border-black dark:bg-black/90 bg-white/90 px-2 py-1 font-semibold transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] dark:hover:shadow-[4px_4px_0px_white] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"
+                    className="font-baskerville text-lg mt-2 sm:mt-0 rounded-lg flex flex-row items-center justify-between w-26 border-2 border-dashed dark:border-white border-black dark:bg-black/90 bg-white/90 px-2 py-1 font-semibold transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] dark:hover:shadow-[4px_4px_0px_white] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"
                   >
                     GitHub <Github className="size-5" />
                   </a>

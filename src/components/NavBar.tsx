@@ -23,6 +23,7 @@ import {
 import { Dock, DockIcon } from "./ui/dock";
 import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
 import { Link } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -95,79 +96,110 @@ const DATA = {
 };
 
 export function NavBar() {
+  const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
+
   return (
-    <div className=" flex flex-col justify-center items-center">
+    <div className="pointer-events-none fixed inset-x-0 top-0 z-[100] flex justify-center">
       <TooltipProvider>
-        <Dock direction="middle" className="fixed z-[100] top-0">
-          <img
+        <Dock
+          direction="middle"
+          className="pointer-events-auto relative mx-auto mt-4 flex max-w-[95vw] items-center rounded-2xl border bg-background/95 px-2 md:mt-6 md:px-4"
+        >
+          {/* Logo Section */}
+          { !isMobile  && <img
             src="/images/logo.png"
             alt="Logo"
-            className="size-10 rounded-full mr-5"
+            className="mr-2 size-8 rounded-full md:mr-5 md:size-10"
+          />}
+
+          {/* Navigation Items */}
+          {DATA.navbar.map((item) => {
+            // logic: if mobile, hide "Skills". Always show others.
+            if (isMobile && item.label === "Skills") return null;
+
+            return (
+              <DockIcon key={item.label}>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    {item.label === "Blog" ? (
+                      <Link
+                        to={item.href}
+                        aria-label={item.label}
+                        className={cn(
+                          buttonVariants({ variant: "ghost", size: "icon" }),
+                          "size-9 rounded-full md:size-12",
+                        )}
+                      >
+                        <item.icon className="size-3.5 md:size-5" />
+                      </Link>
+                    ) : (
+                      <a
+                        href={item.href}
+                        aria-label={item.label}
+                        className={cn(
+                          buttonVariants({ variant: "ghost", size: "icon" }),
+                          "size-9 rounded-full md:size-12",
+                        )}
+                      >
+                        <item.icon className="size-3.5 md:size-5" />
+                      </a>
+                    )}
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{item.label}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </DockIcon>
+            );
+          })}
+
+          {/* Separator 1 */}
+          <Separator
+            orientation="vertical"
+            className="mx-1 h-6 md:mx-4 md:h-full"
           />
 
-          {DATA.navbar.map((item) => (
-            <DockIcon key={item.label}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  {item.label === "Blog" ? (
-                    <Link
-                      to={item.href}
-                      aria-label={item.label}
-                      className={cn(
-                        buttonVariants({ variant: "ghost", size: "icon" }),
-                        "size-12 rounded-full",
-                      )}
-                    >
-                      <item.icon className="size-5" />
-                    </Link>
-                  ) : (
+          {/* Social Icons */}
+          {Object.entries(DATA.contact.social).map(([name, social]) => {
+            // logic: if mobile, hide "GitHub". Always show others.
+            if (isMobile && name === "GitHub") return null;
+
+            return (
+              <DockIcon key={name}>
+                <Tooltip>
+                  <TooltipTrigger asChild>
                     <a
-                      href={item.href}
-                      aria-label={item.label}
+                      href={social.url}
+                      aria-label={social.name}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={cn(
                         buttonVariants({ variant: "ghost", size: "icon" }),
-                        "size-12 rounded-full",
+                        "size-9 rounded-full md:size-12",
                       )}
                     >
-                      <item.icon className="size-5" />
+                      <social.icon className="size-3.5 md:size-5" />
                     </a>
-                  )}
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{item.label}</p>
-                </TooltipContent>
-              </Tooltip>
-            </DockIcon>
-          ))}
-          <Separator orientation="vertical" className="h-full mx-4" />
-          {Object.entries(DATA.contact.social).map(([name, social]) => (
-            <DockIcon key={name}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <a
-                    href={social.url}
-                    aria-label={social.name}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12 rounded-full",
-                    )}
-                  >
-                    <social.icon className="size-5" />
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{name}</p>
-                </TooltipContent>
-              </Tooltip>
-            </DockIcon>
-          ))}
-          <Separator orientation="vertical" className="h-full mx-4" />
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{name}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </DockIcon>
+            );
+          })}
+
+          {/* Separator 2 */}
+          <Separator
+            orientation="vertical"
+            className="mx-1 h-6 md:mx-4 md:h-full"
+          />
+
+          {/* Theme Toggler */}
           <DockIcon>
             <Tooltip>
               <TooltipTrigger asChild>
-                <AnimatedThemeToggler className="size-12 rounded-full flex items-center justify-center hover:bg-accent transition-colors" />
+                <AnimatedThemeToggler className="flex size-9 items-center justify-center rounded-full hover:bg-accent transition-colors md:size-12" />
               </TooltipTrigger>
               <TooltipContent>
                 <p>Toggle Theme</p>

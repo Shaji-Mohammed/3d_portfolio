@@ -120,9 +120,7 @@ body > section,
     @apply grid grid-cols-1 xl:grid-cols-12 gap-10;
   }
 
-  .hero-layout {
-    @apply relative z-10 xl:mt-5 mt-20 md:h-dvh h-[80vh] flex flex-row xl:items-center items-start justify-center;
-  }
+  
 
   .hero-text {
     @apply flex flex-col justify-center md:text-[40px] text-[40px] font-baskerville relative z-10 pointer-events-none;

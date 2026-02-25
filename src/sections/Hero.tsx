@@ -24,13 +24,13 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative overflow-hidden">
-      <div className="hero-layout">
+      <div className="flex-col sm:flex-row relative z-10 xl:mt-5 mt-20 md:h-dvh flex xl:items-center items-start justify-center">
         <header className="flex flex-col justify-between md:w-[50%] w-screen md:px-20 px-5">
-          <img src="images/self.jpeg" className="size-54 rounded-full mb-10" />
+          <img src="images/self.jpeg" className="size-54  m-auto sm:mx-0 rounded-full my-8" />
 
           <div className="flex flex-col gap-7">
             <div className="hero-text">
-              <p className="text-xl font-baskerville text-red-600">Hello</p>
+              <p className="text-2xl font-baskerville text-red-600">Hello</p>
               <h1 className="text-5xl font-baskerville text-black-50 dark:text-white-50 relative z-10 pointer-events-none">
                 I'm Shaji,
               </h1>
@@ -61,7 +61,7 @@ const Hero = () => {
             </div>
 
             <PulsatingButton
-              className="md:w-35 text-lg font-baskerville font-semibold md:h-12 w-60 h-12"
+              className="md:w-35 text-lg font-baskerville font-semibold m-auto sm:mx-0 w-30 h-12"
               pulseColor="#808080"
               duration="2s"
               id="button"
