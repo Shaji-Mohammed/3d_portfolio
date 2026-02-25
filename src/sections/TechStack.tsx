@@ -1,4 +1,3 @@
-import TitleHeader from "../components/TitleHeader";
 import { techStackIcons } from "../constants";
 import TechIcon from "../components/Models/TechLogos/TechIcon";
 import { useGSAP } from "@gsap/react";
@@ -26,12 +25,11 @@ const TechStack = () => {
     );
   });
   return (
-    <div id="skills" className="flex-center py-10 section-padding">
-      <div className="w-full h-full md:px-10 px-5">
-        <TitleHeader
-          title="My Preserred Tech Stack"
-          sub="The skills I bring to the Table"
-        />
+    <div id="skills" className="md:h-dvh flex-center py-10 section-padding">
+      <div className="w-full h-full mt-30 md:px-10 px-5">
+        <h3 className="justify-center items-center text-3xl md:text-4xl font-baskerville mb-8 text-center">
+          My Tech Stack
+        </h3>
         <div className="tech-grid">
           {techStackIcons.map((icon) => (
             <div
@@ -43,7 +41,7 @@ const TechStack = () => {
                 <div className="tech-icon-wrapper">
                   <TechIcon model={icon} />
                 </div>
-                <div className="padding-x w-full">
+                <div className="padding-x font-baskerville w-full">
                   <p>{icon.name}</p>
                 </div>
               </div>

@@ -19,13 +19,13 @@ const navLinks = [
 ];
 
 const words = [
-  { text: "Web Developer", imgPath: "/images/ideas.svg" },
   { text: "Software Engineer", imgPath: "/images/concepts.svg" },
-  { text: "Problem Solver", imgPath: "/images/designs.svg" },
-  { text: "Trader", imgPath: "/images/code.svg" },
   { text: "Web Developer", imgPath: "/images/ideas.svg" },
-  { text: "Software Engineer", imgPath: "/images/concepts.svg" },
+  { text: "Full Stack Developer", imgPath: "/images/concepts.svg" },
+  { text: "Frontend Developer", imgPath: "/images/ideas.svg" },
+  { text: "Mobile Developer", imgPath: "/images/ideas.svg" },
   { text: "Problem Solver", imgPath: "/images/designs.svg" },
+  { text: "Tech Enthusiast", imgPath: "/images/concepts.svg" },
   { text: "Trader", imgPath: "/images/code.svg" },
 ];
 
@@ -37,53 +37,46 @@ const counterItems = [
 ];
 
 const logoIconsList = [
+  { id: 1, imgPath: "/images/Ashored.png", name: "Ashored" },
+  { id: 2, imgPath: "/images/Protocase.png", name: "company-logo" },
+  { id: 3, imgPath: "/images/EstateLynx.png", name: "company-logo" },
+  { id: 4, imgPath: "/images/dal.png", name: "company-logo" },
+
+  { id: 5, imgPath: "/images/Ashored.png", name: "Ashored" },
+  { id: 6, imgPath: "/images/Protocase.png", name: "company-logo" },
+  { id: 7, imgPath: "/images/EstateLynx.png", name: "company-logo" },
+  { id: 8, imgPath: "/images/dal.png", name: "company-logo" },
+
+  { id: 9, imgPath: "/images/Ashored.png", name: "Ashored" },
+  { id: 10, imgPath: "/images/Protocase.png", name: "company-logo" },
+  { id: 11, imgPath: "/images/EstateLynx.png", name: "company-logo" },
+  { id: 12, imgPath: "/images/dal.png", name: "company-logo" },
+];
+
+export const Exp_summary = [
   {
-    imgPath: "/images/Ashored.png",
-    name: "Ashored",
+    postion: "Software Engineer",
+    company: "EstateLynx Inc.",
+    duration: "Jan 2025 - Present",
+    desc: "Engineered an iOS app (React Native, TypeScript) and a Django REST API deployed on Azure, with JWT auth, real-time chat, and cloud storage integration.",
   },
   {
-    imgPath: "/images/Protocase.png",
-    name: "company-logo",
+    postion: "Software Developer Intern",
+    company: "Ashored Innovations",
+    duration: "Jan 2024 - Aug 2024",
+    desc: "Built 120+ Python E2E tests for a GraphQL API, and reduced QA through CI/CD automation (AWS CodeBuild & GitHub Actions). Automated AWS Cognito workflows and migrated an App to Web.",
   },
   {
-    imgPath: "/images/EstateLynx.png",
-    name: "company-logo",
+    postion: "Instructional Developer",
+    company: "Dalhousie University",
+    duration: "Jan 2023 - Dec 2025",
+    desc: "Developed a TA training website (Next.js) serving 150+ users. Automated academic timetable extraction with Selenium, developed ETL-style data workflows and dashboards in R and Power BI to support data-driven decision-making.",
   },
   {
-    imgPath: "/images/dal.png",
-    name: "company-logo",
-  },
-  {
-    imgPath: "/images/Ashored.png",
-    name: "Ashored",
-  },
-  {
-    imgPath: "/images/Protocase.png",
-    name: "company-logo",
-  },
-  {
-    imgPath: "/images/EstateLynx.png",
-    name: "company-logo",
-  },
-  {
-    imgPath: "/images/dal.png",
-    name: "company-logo",
-  },
-  {
-    imgPath: "/images/Ashored.png",
-    name: "Ashored",
-  },
-  {
-    imgPath: "/images/Protocase.png",
-    name: "company-logo",
-  },
-  {
-    imgPath: "/images/EstateLynx.png",
-    name: "company-logo",
-  },
-  {
-    imgPath: "/images/dal.png",
-    name: "company-logo",
+    postion: "Software Developer Intern",
+    company: "Protocase Inc.",
+    duration: "May 2022 - Aug 2022",
+    desc: "Developed a full-stack webApp using Java and React for AutoCAD uploads with Three.js 3D visualization. Built REST APIs for real-time pricing integration and contributed to Agile sprint planning, UML design, and documentation.",
   },
 ];
 
@@ -169,12 +162,8 @@ const project1_tools = [
     iconPath: "/images/React.png",
   },
   {
-    name: "Expo",
-    iconPath: "/images/Expo.png",
-  },
-  {
-    name: "NativeWind",
-    iconPath: "/images/Tailwind.png",
+    name: "Django",
+    iconPath: "/images/Django.png",
   },
   {
     name: "Azure",
@@ -185,8 +174,8 @@ const project1_tools = [
     iconPath: "/images/PostgreSQL.png",
   },
   {
-    name: "Django",
-    iconPath: "/images/Django.png",
+    name: "NativeWind",
+    iconPath: "/images/Tailwind.png",
   },
 ];
 
@@ -280,8 +269,6 @@ const expLogos = [
     imgPath: "/images/logo3.png",
   },
 ];
-
-
 
 // const socialIcons = [
 //   {

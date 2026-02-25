@@ -1,9 +1,8 @@
 import { useGSAP } from "@gsap/react";
-import Button from "../components/Button.js";
-import HeroExp from "../components/HeroModels/HeroExp.tsx";
-import AnimatedCounter from "../components/AnimatedCounter";
-import { words } from "../constants/index.ts";
+import { Exp_summary, words } from "../constants/index.ts";
 import gsap from "gsap";
+import { PulsatingButton } from "@/components/ui/pulsating-button.tsx";
+import { FaqSection } from "@/components/blocks/faq.tsx";
 
 const Hero = () => {
   useGSAP(() => {
@@ -19,33 +18,32 @@ const Hero = () => {
         stagger: 0.2,
         duration: 1,
         ease: "power2.inOut",
-      }
+      },
     );
   });
 
   return (
     <section id="hero" className="relative overflow-hidden">
-      <div className="absolute top-0 left-0 z-10">
-        <img src="/images/bg.png" alt="background" />
-      </div>
+      <div className="flex-col sm:flex-row relative z-10 xl:mt-5 mt-20 md:h-dvh flex xl:items-center items-start justify-center">
+        <header className="flex flex-col justify-between md:w-[50%] w-screen md:px-20 px-5">
+          <img src="images/self.jpeg" className="size-54  m-auto sm:mx-0 rounded-full my-8" />
 
-      <div className="hero-layout">
-        <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
           <div className="flex flex-col gap-7">
             <div className="hero-text">
-              <h1 className="text-white-50 relative z-10 pointer-events-none">
-                Hi, I'm Shaji,
+              <p className="text-2xl font-baskerville text-red-600">Hello</p>
+              <h1 className="text-5xl font-baskerville text-black-50 dark:text-white-50 relative z-10 pointer-events-none">
+                I'm Shaji,
               </h1>
-              <h1 className="">
+              <h1 className="font-baskerville">
                 a
                 <span className="slide">
                   <span className="wrapper">
                     {words.map((word: any) => (
                       <span
                         key={word.text}
-                        className="flex items-center md:gap-3 gap-1"
+                        className="flex items-center md:gap-3 gap-1 dark:text-blue-400 text-blue-600"
                       >
-                        <span>{word.text}</span>
+                        <span className="font-baskerville">{word.text}</span>
                       </span>
                     ))}
                   </span>
@@ -54,30 +52,32 @@ const Hero = () => {
             </div>
 
             <div className="mt-[-20px]">
-              <p className="text-xl">
-                I'm a recent Computer Science Graduate from Dalhousie
-                University.
+              <p className="text-xl font-baskerville">
+                Computer Science Graduate from Dalhousie University.
               </p>
-              <p className="text-xl">Focused on solving Real World problems</p>
+              <p className="text-xl font-baskerville">
+                Focused on solving Real World problems
+              </p>
             </div>
 
-            <Button
-              className="md:w-80 md:h-16 w-60 h-12"
+            <PulsatingButton
+              className="md:w-35 text-lg font-baskerville font-semibold m-auto sm:mx-0 w-30 h-12"
+              pulseColor="#808080"
+              duration="2s"
               id="button"
-              text="See my Work"
-            />
+            >
+              My Work
+            </PulsatingButton>
           </div>
         </header>
 
-        {/* 3D Model */}
-        <figure>
-          <div className="hero-3d-layout">
-            <HeroExp />
-          </div>
-        </figure>
+        <div className="flex flex-col w-full h-full md:max-w-[50%] md:mt-30 mt-10">
+          <FaqSection 
+            title="Work Experience" 
+            items={Exp_summary} 
+          />
+        </div>
       </div>
-
-      <AnimatedCounter />
     </section>
   );
 };
