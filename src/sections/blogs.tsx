@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { client } from "../sanityClient";
 import imageUrlBuilder from "@sanity/image-url";
 import { LazyImage } from "@/components/ui/lazy-image";
-import { PortableText } from "@portabletext/react";
 
 // 1. Sanity Image Builder Setup
 const builder = imageUrlBuilder(client);
