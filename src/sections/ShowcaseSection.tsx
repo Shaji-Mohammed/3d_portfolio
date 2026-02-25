@@ -51,6 +51,9 @@ const ShowcaseSection = () => {
   return (
     <section id="work" ref={sectionRef} className="app-showcase">
       <div className="w-full">
+        {/* <h3 className="justify-center mt-10 items-center text-3xl md:text-4xl font-baskerville mb-8 text-center">
+          Work and Projects
+        </h3> */}
         <div className="showcaselayout">
           {/* LEFT */}
           <div className="first-project-wrapper" ref={project1Ref}>

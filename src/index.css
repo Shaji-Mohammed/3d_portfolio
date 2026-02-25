@@ -200,7 +200,7 @@ body > section,
     @apply w-full md:h-dvh px-5 md:px-20 py-10 md:py-10 flex items-center justify-center;
 
     .showcaselayout {
-      @apply flex xl:flex-row flex-col gap-10 justify-between;
+      @apply flex xl:flex-row flex-col mt-25 gap-10 justify-between;
     }
 
     .first-project-wrapper {

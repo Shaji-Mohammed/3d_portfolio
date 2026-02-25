@@ -110,7 +110,14 @@ export function NavBar() {
               <Tooltip>
                 <TooltipTrigger asChild>
                   {item.label === "Blog" ? (
-                    <Link to={item.href}>
+                    <Link
+                      to={item.href}
+                      aria-label={item.label}
+                      className={cn(
+                        buttonVariants({ variant: "ghost", size: "icon" }),
+                        "size-12 rounded-full",
+                      )}
+                    >
                       <item.icon className="size-5" />
                     </Link>
                   ) : (
