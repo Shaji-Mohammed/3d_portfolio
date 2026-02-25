@@ -1,4 +1,3 @@
-import TitleHeader from "../components/TitleHeader";
 import { techStackIcons } from "../constants";
 import TechIcon from "../components/Models/TechLogos/TechIcon";
 import { useGSAP } from "@gsap/react";
@@ -26,8 +25,8 @@ const TechStack = () => {
     );
   });
   return (
-    <div id="skills" className="flex-center py-10 section-padding">
-      <div className="w-full h-full md:px-10 px-5">
+    <div id="skills" className="md:h-dvh flex-center py-10 section-padding">
+      <div className="w-full h-full mt-30 md:px-10 px-5">
         <h3 className="justify-center items-center text-3xl md:text-4xl font-baskerville mb-8 text-center">
           My Tech Stack
         </h3>

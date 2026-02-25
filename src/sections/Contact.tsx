@@ -46,7 +46,7 @@ const Contact = () => {
                 return (
                   <div
                     key={item.name}
-                    className="flex md:flex-col items-center flex-row"
+                    className="flex md:flex-col items-start flex-row"
                   >
                     <a
                       href={item.url}

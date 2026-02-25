@@ -8,7 +8,7 @@ import {
   FaHome,
   FaBriefcase,
   FaFileSignature,
-  FaPython
+  FaPython,
 } from "react-icons/fa";
 
 import { cn } from "@/lib/utils";
@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/tooltip";
 import { Dock, DockIcon } from "./ui/dock";
 import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
+import { Link } from "react-router-dom";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -62,9 +63,9 @@ const Icons = {
 
 const DATA = {
   navbar: [
-    { href: "#", icon: FaHome, label: "Home" },
-    { href: "#work", icon: FaBriefcase, label: "Work" },
-    { href: "#", icon: FaFileSignature, label: "Blog" },
+    { href: "/", icon: FaHome, label: "Home" },
+    { href: "/#work", icon: FaBriefcase, label: "Work" },
+    { href: "/blog", icon: FaFileSignature, label: "Blog" },
     { href: "#skills", icon: FaPython, label: "Skills" },
   ],
   contact: {
@@ -94,7 +95,6 @@ const DATA = {
 };
 
 export function NavBar() {
-
   return (
     <div className=" flex flex-col justify-center items-center">
       <TooltipProvider>
@@ -109,16 +109,22 @@ export function NavBar() {
             <DockIcon key={item.label}>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <a
-                    href={item.href}
-                    aria-label={item.label}
-                    className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12 rounded-full",
-                    )}
-                  >
-                    <item.icon className="size-5" />
-                  </a>
+                  {item.label === "Blog" ? (
+                    <Link to={item.href}>
+                      <item.icon className="size-5" />
+                    </Link>
+                  ) : (
+                    <a
+                      href={item.href}
+                      aria-label={item.label}
+                      className={cn(
+                        buttonVariants({ variant: "ghost", size: "icon" }),
+                        "size-12 rounded-full",
+                      )}
+                    >
+                      <item.icon className="size-5" />
+                    </a>
+                  )}
                 </TooltipTrigger>
                 <TooltipContent>
                   <p>{item.label}</p>
@@ -155,7 +161,6 @@ export function NavBar() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <AnimatedThemeToggler className="size-12 rounded-full flex items-center justify-center hover:bg-accent transition-colors" />
-                
               </TooltipTrigger>
               <TooltipContent>
                 <p>Toggle Theme</p>
